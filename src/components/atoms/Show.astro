@@ -1,0 +1,11 @@
+---
+interface Props {
+  when: boolean;
+}
+export const prerender = false;
+
+const { when } = Astro.props;
+---
+
+{when && <slot name="if" />}
+{!when && <slot name="else" />}

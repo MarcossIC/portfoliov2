@@ -1,0 +1,40 @@
+---
+import Link from "../atoms/Link.astro";
+
+interface Props {
+  to: string;
+  text: string;
+}
+const { to, text } = Astro.props;
+console.log(text);
+---
+
+<div class="text-[1.1rem] min-[1500px]:text-2xl min-[1700px]:text-3xl">
+  <Link to={to} target="_self" styles="mr-4">
+    {text}
+
+    <span
+      class="h-[2px] inline-block bg-violet-900 absolute left-0 -bottom-0.5
+            group-hover:w-full transition-all ease duration-300"
+    >
+      &nbsp;
+    </span>
+  </Link>
+</div>
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    width: 0px;
+    opacity: 0.95;
+
+    &.active-link {
+      width: 100%;
+    }
+  }
+</style>

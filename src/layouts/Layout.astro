@@ -1,51 +1,199 @@
 ---
+import Header from "../components/organisms/Header.astro";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Home page, where projects and experiences are shown in Marcos Lopez's web portfolio."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta property="og:title" content="Portfolio Marcos Lopez" />
+    <meta
+      property="og:description"
+      content="Portfolio, where projects and experiences are shown web portfolio."
+    />
+    <meta property="og:site_name" content="Portfolio Marcos Lopez" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://marcosic.netlify.app" />
+    <meta name="al:android:app_name" content="Portfolio Marcos Lopez" />
+    <meta name="al:ios:app_name" content="Portfolio Marcos Lopez" />
+    <meta name="twitter:title" content="Portfolio Marcos Lopez" />
+    <meta name="twitter:site" content="@MarcosLopez" />
+    <meta
+      name="twitter:description"
+      content="Portfolio, where projects and experiences are shown web portfolio."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="author" href="https://www.linkedin.com/in/marcos-lopez-dev/" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <div class="app-container">
+      <Header />
+
+      <slot />
+    </div>
+  </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+    min-width: 0;
+    scrollbar-width: thin;
+  }
+  html {
+    height: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+  }
+  @supports (font-variation-settings: normal) {
+    html {
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    }
+  }
+
+  img {
+    max-width: none;
+  }
+  body {
+    background: url("/img/bg2.webp") fixed center / cover;
+    font-family:
+      "Montserrat",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    color: #f5f5f5;
+    min-height: 100dvh;
+    max-width: 100dvw;
+    direction: ltr;
+
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    outline: none;
+    overscroll-behavior-x: none;
+    touch-action: manipulation;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h7 {
+    text-wrap: balance;
+  }
+  p,
+  pre {
+    text-wrap: pretty;
+  }
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+
+    display: none;
+  }
+  ::-webkit-scrollbar button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 0px none transparent;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border: 0px none transparent;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: transparent;
+  }
+  ::-webkit scrollbar-track:active {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  .app-container {
+    margin-inline: 5dvw;
+    min-height: 100dvh;
+  }
 </style>

@@ -1,0 +1,25 @@
+---
+interface Props {
+  to: string;
+  target?: string;
+  styles?: string;
+}
+
+const { to, target = "", styles = "" } = Astro.props;
+const local = Astro.currentLocale;
+console.log({ local });
+
+const isActive = false;
+---
+
+<a
+  href={to}
+  target={target}
+  role="link"
+  class:list={[
+    `relative group cursor-pointer ${styles}`,
+    { "active-link": isActive },
+  ]}
+>
+  <slot />
+</a>
