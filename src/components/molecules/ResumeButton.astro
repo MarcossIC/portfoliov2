@@ -1,0 +1,70 @@
+---
+import Link from "../atoms/Link.astro";
+---
+
+<button class="button-resume">
+  <Link
+    to="https://drive.google.com/file/d/1znfQJffUhuawHnsKnSUGa6aGtnA9q1OY/view?usp=sharing"
+    target="_blank"
+    styles="flex bg-none p-0 rounded-none opacity-100 rounded-none items-center gap-2"
+  >
+    <span>View resume</span>
+    <svg
+      class="arrow"
+      aria-hidden="true"
+      role="img"
+      width="1.5em"
+      height="1.5em"
+      color="currentColor"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      fill="none"
+      stroke="currentColor"
+    >
+      <line y2="12" x2="19" y1="12" x1="5"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </Link>
+</button>
+
+<style>
+  .button-resume {
+    transition-property: color, transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 225ms;
+    transition-delay: 35ms;
+
+    padding: 0px;
+    color: var(--ml-white);
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: var(--ml-accent-100);
+      scale: 1.05;
+
+      .arrow {
+        -webkit-transform: rotate(-45deg) scale(1.2) translateX(10%)
+          translateY(-10%);
+        -ms-transform: rotate(-45deg) scale(1.2) translateX(10%)
+          translateY(-10%);
+        transform: rotate(-45deg) scale(1.2) translateX(10%) translateY(-10%);
+      }
+    }
+  }
+
+  span {
+    text-align: center;
+  }
+
+  .arrow {
+    transition-property: color, transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+    margin-inline-start: 5px;
+
+    padding: 1px;
+  }
+</style>

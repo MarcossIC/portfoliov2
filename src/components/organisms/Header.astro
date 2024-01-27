@@ -1,35 +1,24 @@
 ---
 import Navigate from "../molecules/Navigate.astro";
-import Logo from "../atoms/Logo.astro";
-import SocialButton from "../molecules/SocialButton.astro";
-import LinkedInIcon from "../atoms/LinkedinIcon.astro";
-import GithubIcon from "../atoms/GithubIcon.astro";
+import Pyramid from "../molecules/Pyramid.astro";
+import ResumeButton from "../molecules/ResumeButton.astro";
 ---
 
 <header id="header">
   <div class="header-container">
+    <span class="logo">
+      <Pyramid />
+    </span>
+
     <nav class="navigation">
       <Navigate text="Home" to="/" />
       <Navigate text="About" to="/" />
       <Navigate text="Contact" to="/" />
     </nav>
 
-    <span class="logo">
-      <Logo />
-    </span>
-
-    <nav class="max-[700px]:hidden justify-self-center mt-6">
-      <ul class="social-nav">
-        <li>
-          <SocialButton socialUri="">
-            <LinkedInIcon />
-          </SocialButton>
-        </li>
-        <li>
-          <SocialButton socialUri=""><GithubIcon /></SocialButton>
-        </li>
-      </ul>
-    </nav>
+    <div class="flex flex-1 items-center justify-end">
+      <ResumeButton />
+    </div>
   </div>
 </header>
 
@@ -64,6 +53,9 @@ import GithubIcon from "../atoms/GithubIcon.astro";
 
   .logo {
     display: none;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .navigation {
@@ -104,7 +96,8 @@ import GithubIcon from "../atoms/GithubIcon.astro";
 
   @media only screen and (min-width: 700px) {
     .logo {
-      display: block;
+      display: flex;
+
       position: sticky;
     }
   }

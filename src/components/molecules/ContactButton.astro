@@ -1,0 +1,22 @@
+---
+import Link from "../atoms/Link.astro";
+---
+
+<button class="button-contact hover:scale-[1.05] transition-transform">
+  <Link to="/contact">Contact me</Link>
+</button>
+
+<style>
+  .button-contact {
+    background-color: var(--ml-white-100);
+    color: var(--ml-accent-100);
+  }
+
+  .button-contact:hover {
+    background-color: var(--ml-white-200);
+  }
+
+  .button-contact-color:active {
+    background-color: var(--ml-white-300);
+  }
+</style>

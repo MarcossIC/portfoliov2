@@ -3,11 +3,12 @@ interface Props {
   to: string;
   target?: string;
   styles?: string;
+  title?: string;
 }
 
-const { to, target = "", styles = "" } = Astro.props;
-const local = Astro.currentLocale;
-console.log({ local });
+const { to, target = "", styles = "", title="" } = Astro.props;
+const url = Astro.url;
+console.log({ url });
 
 const isActive = false;
 ---
@@ -20,6 +21,7 @@ const isActive = false;
     `relative group cursor-pointer ${styles}`,
     { "active-link": isActive },
   ]}
+  aria-label={title}
 >
   <slot />
 </a>

@@ -1,0 +1,40 @@
+---
+const { width, height, duration } = Astro.props;
+---
+
+<div
+  class="rotation"
+  style={{
+    width: width + "px",
+    height: height + "px",
+    "--duration": duration ?? "4s",
+  }}
+>
+  <div class="wrapper"><slot /></div>
+</div>
+
+<style>
+  .rotation {
+    position: relative;
+    display: block;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+  }
+
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation-duration: var(--duration);
+    animation-name: spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+</style>

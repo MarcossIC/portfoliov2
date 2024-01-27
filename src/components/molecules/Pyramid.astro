@@ -1,0 +1,63 @@
+---
+import RotationWraper from "../atoms/RotationWraper.astro";
+---
+
+<RotationWraper width={85} height={85} duration="6s">
+  <span class="side side1"></span>
+  <span class="side side2"></span>
+  <span class="side side3"></span>
+  <span class="side side4"></span>
+  <span class="shadow"></span>
+</RotationWraper>
+
+<style>
+  .side {
+    width: 50px;
+    height: 50px;
+    /* you can choose any gradient or color you want */
+    /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: center top;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    cursor: pointer;
+  }
+
+  .side1 {
+    transform: rotateZ(-30deg) rotateY(90deg);
+    background: conic-gradient(#130042, #4c006d, #2b044a, #0e053e);
+  }
+
+  .side2 {
+    transform: rotateZ(30deg) rotateY(90deg);
+    background: conic-gradient(#130042, #4c006d, #2b044a, #0e053e);
+  }
+
+  .side3 {
+    transform: rotateX(30deg);
+    background: conic-gradient(#130042, #4c006d, #2b044a, #0e053e);
+  }
+
+  .side4 {
+    transform: rotateX(-30deg);
+    background: conic-gradient(#130042, #4c006d, #2b044a, #0e053e);
+  }
+
+  .shadow {
+    width: 70px;
+    height: 70px;
+    background: #2e045ac4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateX(90deg) translateZ(-40px);
+    filter: blur(22px);
+  }
+</style>

@@ -1,45 +1,47 @@
 ---
 import Link from "../atoms/Link.astro";
+import RotationWraper from "../atoms/RotationWraper.astro";
 
 interface Props {
   socialUri: string;
+  target?: string;
+  title?: string;
 }
 
-const { socialUri } = Astro.props;
+const { socialUri, target = "_blank", title="" } = Astro.props;
 ---
 
-<Link to={socialUri} target="_blank" styles="social-link">
+<Link to={socialUri} target={target} styles="social-link" title={title}>
   <slot />
 </Link>
 
 <style is:global>
   .social-link {
-    width: 1.5rem;
-    margin-inline: 0.75rem;
+    width: fit-content;
     display: inline-block;
     object-fit: cover;
     transition-property: transform, filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-  }
 
-  .social-link:hover {
-    box-shadow:
-      0 0 #0000,
-      0 0 #0000,
-      0 0 #0000,
-      0 0 #0000,
-      0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    transform: translate(0, -4px) rotate(0) skewX(0) skewY(0) scaleX(1.1)
-      scaleY(1.1);
-    filter: contrast(1.25);
-  }
+    &:hover {
+      box-shadow:
+        0 0 #0000,
+        0 0 #0000,
+        0 0 #0000,
+        0 0 #0000,
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+      transform: translate(0, -4px) rotate(0) skewX(0) skewY(0) scaleX(1.1)
+        scaleY(1.1);
+      filter: contrast(1.25);
+    }
 
-  @media screen and (min-width: 1580px) {
-    .social-link > div svg {
-      width: 3rem;
-      height: 3rem;
+    @media screen and (min-width: 1580px) {
+      & > div svg {
+        width: 2.45rem;
+        height: 2.45rem;
+      }
     }
   }
 </style>
