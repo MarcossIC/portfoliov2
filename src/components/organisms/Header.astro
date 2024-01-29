@@ -4,7 +4,7 @@ import Pyramid from "../molecules/Pyramid.astro";
 import ResumeButton from "../molecules/ResumeButton.astro";
 ---
 
-<header id="header">
+  <header id="header">
   <div class="header-container">
     <span class="logo">
       <Pyramid />
@@ -16,39 +16,36 @@ import ResumeButton from "../molecules/ResumeButton.astro";
       <Navigate text="Contact" to="/" />
     </nav>
 
-    <div class="flex flex-1 items-center justify-end">
+    <div class="resume-btn">
       <ResumeButton />
     </div>
   </div>
-</header>
+</div>
 
 <style>
   header {
+    max-width: 1700px;
     width: 100%;
-    max-width: 100dvw;
     height: 4.375rem;
 
-    -webkit-backdrop-filter: blur(0.625rem);
-    backdrop-filter: blur(0.625rem);
-    animation: add-shadow linear both;
-    animation-timeline: scroll();
-    animation-range: 0 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   .header-container {
     width: 100%;
 
     background: transparent;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+    justify-content: space-between;
 
     padding-inline: 0.625rem;
 
-    -webkit-backdrop-filter: blur(0.625rem);
-    backdrop-filter: blur(0.625rem);
-    animation: add-shadow linear both;
-    animation-timeline: scroll();
-    animation-range: 0 9.375rem;
   }
 
   .logo {
@@ -56,6 +53,7 @@ import ResumeButton from "../molecules/ResumeButton.astro";
     width: 100%;
     justify-content: flex-start;
     align-items: center;
+        flex: 1 1;
   }
 
   .navigation {
@@ -63,14 +61,17 @@ import ResumeButton from "../molecules/ResumeButton.astro";
     display: flex;
     justify-self: center;
     column-gap: 2.75rem;
+        flex: 1 1;
   }
 
-  .social-nav {
+  .resume-btn {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.75rem;
+    flex: 1 1;
+
+    padding-block-end: 1px;
+
   }
 
   @media only screen and (min-width: 500px) {
@@ -87,10 +88,6 @@ import ResumeButton from "../molecules/ResumeButton.astro";
       align-content: center;
       display: flex;
       margin-block-start: 1rem;
-    }
-
-    .social-nav {
-      display: none;
     }
   }
 
@@ -117,15 +114,14 @@ import ResumeButton from "../molecules/ResumeButton.astro";
       font-size: 1.8rem;
       column-gap: 2rem;
     }
-    .social-nav {
-      column-gap: 6rem;
-    }
   }
 
   @keyframes addShadow {
     100% {
       box-shadow: 0 5px 5px -3px hsla(0, 0%, 100%, 0.25);
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0,0,0,.2);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
     }
   }
 </style>

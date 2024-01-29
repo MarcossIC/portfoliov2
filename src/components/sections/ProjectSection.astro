@@ -1,0 +1,55 @@
+---
+import ProjectCard from "../molecules/ProjectCard.astro";
+---
+
+<section>
+    <header>
+        <h2>
+            <span>Some</span>
+            <span class="red-title">Projects</span>
+        </h2>
+    </header>
+
+    <main>
+        <div class="first-project">
+            <ProjectCard title="Books Leaks" img="/img/books-leaks.webp" desc="" id="books-leaks"/>
+        </div>
+    </main>
+</section>
+
+
+<style>
+    section{
+        min-height: 100dvh;
+    }
+
+    header {
+        display: flex;
+        flex: 1 1;
+        justify-content: center;
+    align-items: center;
+
+        
+    }
+    h2 {
+        display: flex;
+        font-size: 4rem;
+        gap: 1rem;
+        font-weight: 700;
+        line-height: 5rem;
+        letter-spacing: .2px;
+    }
+    main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 2fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        margin-block-start: 1rem;
+    }
+  
+    .first-project {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+</style>

@@ -1,0 +1,69 @@
+---
+interface Props {
+    title: string;
+    desc: string;
+    img: string;
+    id: string;
+}
+const { title, desc, img, id } = Astro.props;
+---
+
+<article id={id}>
+    <div class="bg-img" style={{backgroundImage: `url(${img})`}}></div>
+    <main>
+        <h3>{title}</h3>
+    </main>
+</article>
+
+
+<style>
+    article {
+        position: relative;
+        display: flex;
+        border-radius: 10px;
+        cursor: pointer;
+        flex: 1 1;
+        height: 100px;
+    }
+    .bg-img {
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 100%;
+    }
+    article:is(:hover) img{
+        transform: blur(20px);
+        background-color: rgba(15, 15, 15, 0.267);
+        z-index: 5;
+    }
+
+    article:has(img:is(:hover)) main {
+        opacity: 1;
+        z-index: 10;
+    }
+
+    main {
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1;
+        top: 0;
+        left: 2%;
+        margin: 5px;
+        
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        min-width: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        filter: brightness(.75);
+    }
+
+</style>
