@@ -35,14 +35,13 @@ const { url, id } = Astro.props
 
     background: radial-gradient(
         50% 70.31% at 50% 0%,
-        rgba(126, 61, 255, 0.04) 0%,
-        rgba(126, 61, 255, 0) 100%
+        rgb(35 0 74 / 40%) 0%,
+        rgb(126 61 255 / 0%) 100%
       ),
-      rgba(11, 1, 29, 0.01);
-    backdrop-filter: blur(8.5px);
-    -webkit-perspective: 1000px;
+      rgb(49 28 87 / 5%);
+    -webkit-backdrop-filter: blur(8.5px);
+    backdrop-filter: blur(30px);
     perspective: 1000px;
-    border-radius: 1rem;
     margin-block-end: 1rem;
 
     &::before {
@@ -88,5 +87,20 @@ const { url, id } = Astro.props
     background-repeat: no-repeat;
     background-origin: border-box;
     background-position: left;
+  }
+  .project-img {
+    opacity: 0.85;
+    transition: opacity 100ms ease;
+    .project-atropos-content {
+      scale: 0.97;
+      transition: scale 300ms ease;
+    }
+    &:hover {
+      opacity: 1;
+
+      .project-atropos-content {
+        scale: 1;
+      }
+    }
   }
 </style>

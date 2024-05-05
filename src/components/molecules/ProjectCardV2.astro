@@ -12,6 +12,7 @@ const { url, name, desc, id } = Astro.props
 ---
 
 <figure class='project-card-container'>
+  <div class='brightness brightness-1'></div>
   <ProjectImage url={url} id={id} />
 
   <figcaption class='project-caption'>
@@ -23,6 +24,16 @@ const { url, name, desc, id } = Astro.props
 </figure>
 
 <style>
+  .brightness-1 {
+    width: 25rem;
+    height: 25rem;
+    top: 6%;
+    left: 12%;
+    border-radius: 13%;
+    background: rgb(98 48 187 / 30%);
+    filter: blur(30px);
+    z-index: 0;
+  }
   .project-card-container {
     position: relative;
     width: 100%;
