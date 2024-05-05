@@ -1,13 +1,26 @@
 ---
 interface Props {
   url: string
+  id: string
 }
 
-const { url } = Astro.props
+const { url, id } = Astro.props
 ---
 
 <picture class='project-img'>
-  <div class='img-container' style={{ backgroundImage: `url(${url})` }}></div>
+  <div class='atropos project-atropos-content' id={id}>
+    <!-- scale container (required) -->
+    <div class='atropos-scale'>
+      <!-- rotate container (required) -->
+      <div class='atropos-rotate'>
+        <!-- inner container (required) -->
+        <div class='atropos-inner'>
+          <div class='img-container' style={{ backgroundImage: `url(${url})` }}>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </picture>
 
 <style>
@@ -62,16 +75,16 @@ const { url } = Astro.props
     }
   }
   .img-container {
+    width: 400px;
+    height: 400px;
     background-color: #fff;
     margin-inline: auto;
-    width: 75%;
     border-radius: 0.5rem;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
     vertical-align: middle;
-    height: 80%;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-position: left;
