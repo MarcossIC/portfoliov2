@@ -1,0 +1,65 @@
+---
+import GithubIcon from '../../atoms/GithubIcon.astro'
+import GmailIcon from '../../atoms/GmailIcon.astro'
+import LinkedInIcon from '../../atoms/LinkedinIcon.astro'
+import SocialButton from '../../molecules/SocialButton.astro'
+---
+
+<div class='hero-socials'>
+  <SocialButton
+    socialUri='https://www.linkedin.com/in/marcos-lopez-dev'
+    title='Button to linkedIn profile'
+    styles='bg-[#0A66C2] fill-white p-[8px]'
+  >
+    <LinkedInIcon />
+  </SocialButton>
+  <SocialButton
+    socialUri='https://github.com/MarcossIC'
+    title='Button to github profile'
+    styles='bg-[#00000085] fill-white p-[4px]'
+  >
+    <GithubIcon />
+  </SocialButton>
+  <SocialButton
+    socialUri='mailto:marcoslopezdev18@gmail.com?subject=Hey%20Marcos%20how%20are%20you'
+    target='_self'
+    title='Button for send email to marcoslopezdev18@gmail.com'
+    styles='bg-[#fff] p-[4px]'
+  >
+    <GmailIcon />
+  </SocialButton>
+
+  <SocialButton
+    socialUri='https://drive.google.com/file/d/1znfQJffUhuawHnsKnSUGa6aGtnA9q1OY/view?usp=sharing'
+    target='_self'
+    styles='cv p-[4px] font-bold bg-[var(--ml-accent-100)]'
+  >
+    <span
+      class='absolute top-[48%] left-[50%] -translate-x-2/4 -translate-y-2/4 text-xl'
+      >CV</span
+    >
+  </SocialButton>
+</div>
+
+<style>
+  .hero-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3.75rem;
+    border: 1px solid #2c06701f;
+    margin-inline: auto;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    margin-block-start: 3rem;
+    background: linear-gradient(
+      0deg,
+      rgb(26 0 70 / 10%) 0%,
+      rgb(11 0 30 / 80%) 100%
+    );
+    position: relative;
+    box-shadow:
+      19px 8px 10px 5px rgba(0, 0, 0, 0.2),
+      inset 0 -12px 40px #3800bd26;
+  }
+</style>

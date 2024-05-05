@@ -1,0 +1,43 @@
+---
+
+---
+
+<span class='logo'>
+  <img
+    src='/public/logoWhite.png'
+    alt='Marcos Lopez logo'
+    width='90px'
+    decoding='async'
+    loading='eager'
+  />
+</span>
+
+<style>
+  .logo {
+    display: none;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0.5 0.5;
+
+    img {
+      transform: rotate3d(0, 1, 0, 18deg);
+      transform-style: preserve-3d;
+      padding-block-end: 2px;
+      aspect-ratio: 3/2.5;
+    }
+  }
+
+  @media only screen and (min-width: 841px) {
+    .logo {
+      flex: 1 1;
+    }
+  }
+  @media only screen and (min-width: 700px) {
+    .logo {
+      display: flex;
+
+      position: sticky;
+    }
+  }
+</style>

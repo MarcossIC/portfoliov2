@@ -1,41 +1,21 @@
 ---
-interface Props {
-  styles: string;
-}
 
-const { styles } = Astro.props;
 ---
 
-<div
-  class="text-center w-[30px] h-[30px]"
-  aria-hidden="true"
-  role="img"
-  class:list={[`${styles}`]}
+<svg
+  class='gmail absolute scale-[1.035] mt-[2px]'
+  aria-label='Gmail'
+  role='img'
+  viewBox='0 0 512 512'
+  ><rect width='512' height='512' rx='15%' fill='#ffffff'></rect><path
+    d='M158 391v-142l-82-63V361q0 30 30 30'
+    fill='#4285f4'></path><path
+    d='M 154 248l102 77l102-77v-98l-102 77l-102-77'
+    fill='#ea4335'></path><path
+    d='M354 391v-142l82-63V361q0 30-30 30'
+    fill='#34a853'></path><path
+    d='M76 188l82 63v-98l-30-23c-27-21-52 0-52 26'
+    fill='#c5221f'></path><path
+    d='M436 188l-82 63v-98l30-23c27-21 52 0 52 26'
+    fill='#fbbc04'></path></svg
 >
-  <svg
-    class="gmail absolute top-[-5px] left-[-5px]"
-    width="30"
-    height="30"
-    viewBox="0 0 145 85"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g clip-path="url(#clip0)">
-      <path d="M58 108h14V74L52 59v43c0 3.315 2.685 6 6 6z" fill="#4285F4"
-      ></path>
-      <path d="M120 108h14c3.315 0 6-2.685 6-6V59l-20 15v34z" fill="#34A853"
-      ></path>
-      <path
-        d="M120 48v26l20-15v-8c0-7.415-8.465-11.65-14.4-7.2L120 48z"
-        fill="#FBBC04"></path>
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M72 74V48l24 18 24-18v26L96 92 72 74z"
-        fill="#EA4335"></path>
-      <path
-        d="M52 51v8l20 15V48l-5.6-4.2C60.465 39.35 52 43.585 52 51z"
-        fill="#C5221F"></path>
-    </g>
-  </svg>
-</div>

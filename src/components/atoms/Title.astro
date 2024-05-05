@@ -2,7 +2,7 @@
 
 ---
 
-<h1 class="main-title">
+<h1 class='main-title'>
   <slot />
 </h1>
 
@@ -13,8 +13,23 @@
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
-    font-size: 6.5rem;
-    line-height: 7rem;
+    font-size: clamp(3rem, 18vw, 6.25rem);
+    line-height: clamp(3rem, 18dvw, 6.5rem);
+    margin-block-start: 1rem;
+
+    @media only screen and (min-width: 700px) {
+      & {
+        font-size: 7.5rem;
+        line-height: 8.5rem;
+      }
+    }
+
+    @media only screen and (min-width: 980px) {
+      & {
+        font-size: 6.5rem;
+        line-height: 7.5rem;
+      }
+    }
   }
 
   .title {

@@ -1,18 +1,26 @@
 ---
-import Link from "../atoms/Link.astro";
-import RotationWraper from "../atoms/RotationWraper.astro";
+import Link from '../atoms/Link.astro'
+import RotationWraper from '../legacy/RotationWraper.astro'
 
 interface Props {
-  socialUri: string;
-  target?: string;
-  title?: string;
+  socialUri: string
+  target?: string
+  title?: string
+  styles?: string
 }
 
-const { socialUri, target = "_blank", title="" } = Astro.props;
+const { socialUri, target = '_blank', title = '', styles = '' } = Astro.props
 ---
 
-<Link to={socialUri} target={target} styles="social-link" title={title}>
-  <slot />
+<Link to={socialUri} target={target} styles='social-link' title={title}>
+  <div
+    class='text-center w-[30px] h-[30px] rounded-full icon'
+    aria-hidden='true'
+    role='img'
+    class:list={[`${styles}`]}
+  >
+    <slot />
+  </div>
 </Link>
 
 <style is:global>
@@ -23,6 +31,7 @@ const { socialUri, target = "_blank", title="" } = Astro.props;
     transition-property: transform, filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+    position: relative;
 
     &:hover {
       box-shadow:
@@ -36,12 +45,21 @@ const { socialUri, target = "_blank", title="" } = Astro.props;
         scaleY(1.1);
       filter: contrast(1.25);
     }
+  }
 
-    @media screen and (min-width: 1580px) {
-      & > div svg {
-        width: 2.45rem;
-        height: 2.45rem;
-      }
+  div.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+
+    svg {
+      width: 29px;
+      height: 29px;
+      min-width: 29px;
+      min-height: 29px;
+      top: 50% !important;
+      left: 50% !important;
+      translate: -50% -55% !important;
     }
   }
 </style>

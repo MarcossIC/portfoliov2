@@ -1,0 +1,163 @@
+---
+import Title from '../../atoms/Title.astro'
+import HeroSocialBar from './HeroSocialBar.astro'
+---
+
+<div class='flex max-w-[100dvw] w-full hero-container'>
+  <div class='brightness brightness-1'></div>
+  <div class='brightness brightness-2'></div>
+  <div class='brightness brightness-3'></div>
+  <div class='brightness brightness-5'></div>
+
+  <div class='heading'>
+    <div class='brightness brightness-4'></div>
+    <div class='brightness brightness-6'></div>
+    <h2>
+      <strong><span>Marcos Lopez</span></strong>
+    </h2>
+    <Title>
+      <span class='white-color max-[1500px]:max-h-[110px] bg-clip-text !text-transparent fill-transparent'>Software</span>
+      <span class='red-title max-[1500px]:max-h-[110px] bg-clip-text !text-transparent fill-transparent'>developer</span>
+    </Title>
+  </div>
+  <p class='hero-paragraph'>
+    Hi, I'm Marcos López, a web developer with 6 months of experience. Although
+    I'm new to the professional field, I've been coding for 5 years. I have
+    experience in both front-end and back-end development. Feel free to contact
+    me for any job opportunities or collaboration proposals.
+  </p>
+
+  <HeroSocialBar />
+</div>
+
+<style>
+  .brightness-1 {
+    width: 11dvw;
+    height: 7.5dvw;
+    top: -15px;
+    left: -60px;
+    border-radius: 50%;
+    background: rgb(47 30 77 / 75%);
+  }
+  .brightness-2 {
+    width: 13dvw;
+    height: 9.5dvw;
+    top: -1%;
+    left: -2%;
+    z-index: -2;
+    opacity: 0.65;
+    border-radius: 40%;
+  }
+  .brightness-3 {
+    width: 10rem;
+    height: 10rem;
+    top: -9%;
+    left: 80dvw;
+  }
+  .brightness-4,
+  .brightness-5,
+  .brightness-6 {
+    border-radius: 90%;
+    filter: blur(50px);
+  }
+  .brightness-4 {
+    width: 70rem;
+    height: 15rem;
+    top: 10%;
+    left: -5%;
+    background: rgb(47 30 77 / 40%);
+  }
+  .brightness-5 {
+    width: 20dvw;
+    height: 30dvh;
+    top: 65%;
+    left: -10dvw;
+  }
+  .brightness-6 {
+    width: 75rem;
+    height: 20rem;
+    background: rgb(47 30 77 / 40%);
+    z-index: -2;
+    top: 2%;
+    left: -10%;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1 1;
+    min-height: 88dvh;
+
+    :global(.main-title) {
+      display: block;
+      text-align: center;
+      margin-block: 0;
+
+      .white-color {
+        background-image: var(--ml-text-white);
+      }
+      .red-title {
+        background-image: var(--ml-text-red);
+      }
+    }
+  }
+
+  .heading {
+    user-select: none;
+    justify-self: center;
+    margin-block-end: 1.5rem;
+    position: relative;
+    margin-inline: auto;
+
+    h2 {
+      color: var(--ml-white-100);
+      font-size: 1.1rem;
+      word-spacing: 1px;
+      letter-spacing: 0.1px;
+      user-select: none;
+      border-radius: 2em;
+      background: linear-gradient(
+        162deg,
+        rgb(50 17 106) 40%,
+        rgba(20, 0, 48, 1) 91%
+      );
+      border: 1px solid rgb(145, 82, 245);
+
+      padding: 5px;
+      padding-inline: 15px;
+      width: fit-content;
+      scale: 0.75;
+      translate: -17px 0px;
+
+      span {
+        color: inherit;
+      }
+    }
+  }
+  .white-color {
+    color: var(--ml-white-100);
+  }
+
+  .hero-paragraph {
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    max-width: 55rem;
+    margin-inline: auto;
+    text-align: center;
+
+    @media only screen and (min-width: 700px) {
+      & {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+    }
+
+    @media only screen and (min-width: 980px) {
+      & {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+</style>

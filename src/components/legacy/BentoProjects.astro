@@ -1,0 +1,233 @@
+---
+import ProjectCard from './ProjectCard.astro'
+/*
+let screenSize = { bottom: '41dvh', mid: '40dvh', top: '46dvh' }
+const handleScreenSizeChange = () => {
+  if (window.matchMedia('(min-height: 980px)').matches) {
+    screenSize = { bottom: '37dvh', mid: '33.5dvh', top: '39dvh' }
+  } else if (
+    window.matchMedia('(min-height: 730px) and (max-width: 980px)').matches
+  ) {
+    screenSize = { bottom: '41dvh', mid: '40dvh', top: '46dvh' }
+  } else {
+    screenSize = { bottom: '41dvh', mid: '40dvh', top: '46dvh' }
+  }
+}*/
+---
+
+<main class='w-full grid'>
+  <div class='first-project relative project-title m-2'>
+    <h2
+      class='max-w-full flex flex-col absolute text-center select-none gap-4 font-bold'
+    >
+      <span>Some</span>
+      <span class='red-title'>Projects</span>
+    </h2>
+    <div
+      class='bg-title-project absolute top-0 left-0 right-0 bottom-0 !bg-center !bg-cover'
+    >
+    </div>
+  </div>
+  <div class='second-project m-2'>
+    <ProjectCard
+      title='Codefend'
+      img='/img/codefend2.png'
+      desc='I had the opportunity to work with the Codefend Nexus team to develop "Codefend," a WASP designed for companies seeking to protect their digital assets comprehensively. I contributed to the client development, handling data organization architecture, among other activities.'
+      id='Codefend'
+      style={{ width: '28rem' }}
+      color={{ top: '#cb3a46', mid: '#9e0d19', bottom: '#cb3a46' }}
+    />
+  </div>
+  <div class='third-project m-2'>
+    <ProjectCard
+      title='Paint Ease'
+      img='/img/PaintEase.png'
+      position='left'
+      desc=''
+      id='paint-ease'
+      style={{ width: '28rem' }}
+      color={{ top: '#6711fb', mid: '#8351ff', bottom: '#6711fb' }}
+    />
+  </div>
+
+  <div class='fourth-project m-2'>
+    <ProjectCard
+      title='Clean Architecture'
+      img='/img/clean-architecture.png'
+      desc=''
+      id='clean-architecture'
+      style={{ width: '28rem' }}
+      color={{ top: '#000', mid: '#000', bottom: '#000' }}
+    />
+  </div>
+
+  <div class='fifth-project m-2'>
+    <ProjectCard
+      title='Game Galaxy'
+      img='/img/game-galaxy.webp'
+      desc=''
+      id='game-galaxy'
+      style={{ width: '28rem' }}
+      color={{ top: '#000', mid: '#000', bottom: '#000' }}
+    />
+  </div>
+  <div class='sixth-project m-2'>
+    <ProjectCard
+      title='Books Leaks'
+      img='/img/books-leaks.webp'
+      desc=''
+      id='books-leaks'
+      style={{ width: '28rem' }}
+      color={{ top: '#76B28B', mid: '#7AC6A1', bottom: '#76B28B' }}
+    />
+  </div>
+  <div class='seventh-project m-2'>
+    <ProjectCard
+      title='GPT3 Website'
+      img='/img/gpt3-web.webp'
+      desc=''
+      id='gpt3-website'
+      style={{ width: '28rem' }}
+      color={{ top: '#68b4ff', mid: '#00285d', bottom: '#4574a4' }}
+    />
+  </div>
+</main>
+
+<style>
+  main {
+    grid-template-columns: repeat(2, 1fr) repeat(2, 0.75fr) repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    grid-template:
+      'firstProject firstProject firstProject secondProject secondProject secondProject'
+      'firstProject firstProject firstProject secondProject secondProject secondProject'
+      'sixthProject sixthProject sixthProject seventhProject seventhProject seventhProject'
+      'sixthProject sixthProject sixthProject seventhProject seventhProject seventhProject'
+      'thirdProject thirdProject thirdProject fifthProject fifthProject  fifthProject'
+      'thirdProject thirdProject thirdProject fifthProject fifthProject  fifthProject';
+  }
+
+  h2 {
+    font-size: clamp(1rem, 7dvw, 3.5rem);
+    line-height: clamp(1rem, 7dvw, 4.5rem);
+    letter-spacing: 0.2px;
+    z-index: 100;
+    transition-property: scale;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    span {
+      letter-spacing: 3px;
+      mix-blend-mode: color-dodge;
+      filter: brightness(1.05) contrast(1.75) saturate(0.65);
+      text-shadow: 3px 3px 15px rgb(24 24 24 / 50%);
+    }
+
+    &:hover {
+      scale: 1.065;
+
+      + .bg-title-project {
+        filter: blur(3px) brightness(0.55) contrast(1.1) opacity(0.95)
+          saturate(1.35);
+      }
+    }
+  }
+
+  .bg-title-project {
+    background-image: url('/img/project-sample.webp');
+    border-radius: 10px;
+    filter: blur(2px) brightness(0.55) contrast(1.1) opacity(0.95)
+      saturate(1.35);
+    transition-property: filter;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+
+    &:hover {
+      filter: blur(3px) brightness(0.55) contrast(1.1) opacity(0.95)
+        saturate(1.35);
+    }
+  }
+
+  .first-project {
+    grid-area: firstProject;
+    :global(article::before) {
+      padding-block-end: 24rem;
+    }
+  }
+
+  .second-project {
+    grid-area: secondProject;
+    :global(article::before) {
+      padding-block-end: 24rem;
+    }
+  }
+  .third-project {
+    grid-area: thirdProject;
+    min-width: 65px;
+    :global(article::before) {
+      padding-block-end: 24rem;
+    }
+  }
+  .fourth-project {
+    grid-area: fourthProject;
+    display: none;
+    :global(article::before) {
+      padding-block-end: 24rem;
+    }
+  }
+  .fifth-project {
+    grid-area: fifthProject;
+    :global(article::before) {
+      padding-block-end: 24rem;
+    }
+  }
+  .sixth-project {
+    grid-area: sixthProject;
+    :global(article::before) {
+      padding-block-end: 24rem;
+    }
+  }
+  .seventh-project {
+    grid-area: seventhProject;
+    :global(article::before) {
+      padding-block-end: 24rem;
+    }
+  }
+
+  @media only screen and (min-width: 860px) {
+    main {
+      grid-template:
+        'firstProject firstProject firstProject secondProject secondProject secondProject'
+        'firstProject firstProject firstProject secondProject secondProject secondProject'
+        'sixthProject sixthProject sixthProject sixthProject seventhProject seventhProject'
+        'sixthProject sixthProject sixthProject sixthProject seventhProject seventhProject'
+        'thirdProject thirdProject thirdProject fifthProject fifthProject  fifthProject'
+        'thirdProject thirdProject thirdProject fifthProject fifthProject  fifthProject';
+    }
+  }
+
+  @media only screen and (min-width: 860px) {
+    h2 {
+      font-size: clamp(4rem, 7dvw, 4.5rem);
+      line-height: clamp(5rem, 7dvw, 5.5rem);
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .fourth-project {
+      display: block;
+    }
+    main {
+      grid-template:
+        'firstProject firstProject firstProject secondProject secondProject secondProject'
+        'firstProject firstProject firstProject secondProject secondProject secondProject'
+        'thirdProject thirdProject fourthProject fourthProject  fifthProject  fifthProject'
+        'thirdProject thirdProject fourthProject fourthProject  fifthProject  fifthProject'
+        'sixthProject sixthProject sixthProject sixthProject  seventhProject  seventhProject'
+        'sixthProject sixthProject sixthProject sixthProject  seventhProject  seventhProject';
+    }
+  }
+</style>

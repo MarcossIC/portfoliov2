@@ -1,0 +1,79 @@
+---
+interface Props {
+  url: string
+}
+
+const { url } = Astro.props
+---
+
+<picture class='project-img'>
+  <div class='img-container' style={{ backgroundImage: `url(${url})` }}></div>
+</picture>
+
+<style>
+  .project-img {
+    position: relative;
+    width: 533px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(
+        50% 70.31% at 50% 0%,
+        rgba(126, 61, 255, 0.04) 0%,
+        rgba(126, 61, 255, 0) 100%
+      ),
+      rgba(11, 1, 29, 0.01);
+    backdrop-filter: blur(8.5px);
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    border-radius: 1rem;
+    margin-block-end: 1rem;
+
+    &::before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 15px;
+      padding: 1px;
+      background: linear-gradient(
+          105.43deg,
+          rgba(168, 128, 255, 0) 25.1%,
+          rgba(168, 128, 255, 0.32) 72.57%,
+          rgba(168, 128, 255, 0) 102.57%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.1)
+        );
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+  .img-container {
+    background-color: #fff;
+    margin-inline: auto;
+    width: 75%;
+    border-radius: 0.5rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    vertical-align: middle;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: left;
+  }
+</style>

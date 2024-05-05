@@ -1,16 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import LayoutFlex from "../layouts/LayotFlex.astro";
-import HeroSection from "../components/sections/HeroSection.astro";
-import ProjectSection from "../components/sections/ProjectSection.astro";
+import HTMLLayout from '../layouts/HTMLLayout.astro'
+import HeroSection from '../components/organisms/hero/HeroSection.astro'
+import ProjectSection from '../components/organisms/projects/ProjectSection.astro'
 ---
 
-<Layout title="Home - Marcos Lopez Web Portfolio">
-  <LayoutFlex>
+  <HTMLLayout title='Marcos Lopez Web Portfolio'>
     <HeroSection />
-  </LayoutFlex>
 
-  <ProjectSection />
-</Layout>
-
-<style></style>
+    <ProjectSection />
+  </HTMLLayout>
