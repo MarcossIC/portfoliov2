@@ -59,11 +59,11 @@ import SecondTitle from '../../atoms/SecondTitle.astro'
               >Resume <DownloadIcon /></span
             >
           </div>
-          <h2 class='my-name'>Marcos Lopez</h2>
+          <h2 class='my-name bg-clip-text text-transparent'>Marcos Lopez</h2>
         </div>
       </div>
       <div
-        class='chip-style w-auto text-[24px] ml-[10rem] mt-[10px] h-[90px] flex flex-row flex-wrap !justify-start px-[18px] gap-x-[20px]'
+        class='chip-style fixed-style w-auto text-[24px] ml-[10rem] mt-[10px] h-[90px] flex flex-row flex-wrap !justify-start px-[18px] gap-x-[20px]'
       >
         <span
           class='text-[.975rem] font-medium inline-flex justify-center items-center gap-x-3'
@@ -90,9 +90,14 @@ import SecondTitle from '../../atoms/SecondTitle.astro'
     <div class='bento-item bento-col-2 bento-item-4'>4</div>
     <div class='bento-item bento-col-2 bento-item-5'>5</div>
     <div class='bento-item bento-col-3 bento-item-6'>
-      <h2 class='title'>More porjects</h2>
+      <h2 class='title bg-clip-text text-transparent'>More porjects</h2>
       <p class='text'>You can find more of my projects on github</p>
-      <div class='github-btn justify-center items-center ml-auto mt-4 cursor-pointer'><GithubWithBGIcon /> <span>Go to github</span></div>
+      <div
+        class='github-btn justify-center items-center ml-auto mt-4 cursor-pointer'
+      >
+        <GithubWithBGIcon />
+        <span>Go to github</span>
+      </div>
     </div>
     <div class='bento-item bento-col-3 bento-item-7'>7</div>
     <div class='bento-item bento-col-3 bento-item-8'>8</div>
@@ -181,6 +186,7 @@ import SecondTitle from '../../atoms/SecondTitle.astro'
             max-width: 200px;
             font-weight: 700;
             line-height: 60px;
+            background-image: var(--ml-text-white);
           }
         }
       }
@@ -202,6 +208,7 @@ import SecondTitle from '../../atoms/SecondTitle.astro'
       .title {
         font-size: 2.5rem;
         font-weight: 600;
+        background-image: var(--ml-text-white);
       }
       .text {
         font-size: 1rem;
@@ -268,6 +275,17 @@ import SecondTitle from '../../atoms/SecondTitle.astro'
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.fixed-style {
+      background: linear-gradient(
+        299.25deg,
+        rgba(20, 0, 48, 0.21) 27.3%,
+        rgba(50, 17, 106, 0.3) 66.15%
+      );
+      border: 1px solid rgba(33, 0, 87, 0.7);
+      box-shadow:
+       inset -1px -6px 16px rgb(35 0 70 / 10%), inset 6px 8px 24px rgb(30 0 60 / 40%);
+    }
   }
 
   .pulse-contianer {
@@ -295,6 +313,7 @@ import SecondTitle from '../../atoms/SecondTitle.astro'
       overflow: visible;
       position: relative;
       z-index: 2;
+      padding-block-end: 1px;
     }
 
     .pulse-green {
