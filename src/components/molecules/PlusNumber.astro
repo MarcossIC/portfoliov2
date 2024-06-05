@@ -1,0 +1,21 @@
+---
+interface Props {
+  number: number | string
+}
+
+const { number } = Astro.props
+---
+
+<div
+  class='highlight-text text-[5rem] text-center bg-clip-text text-transparent'
+>
+  {number}<span class='pus-icon'>+</span>
+</div>
+
+<style>
+  .pus-icon {
+    font-size: 3rem;
+    line-height: 8rem;
+    vertical-align: bottom;
+  }
+</style>

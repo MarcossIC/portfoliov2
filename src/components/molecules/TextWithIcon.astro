@@ -1,0 +1,8 @@
+---
+const { text, addSpace } = Astro.props
+---
+
+<span
+  class='text-[.975rem] font-medium inline-flex justify-center items-center gap-x-3'
+  class:list={addSpace ? ['pl-[.3rem]'] : []}><slot /> {text}</span
+>

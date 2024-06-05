@@ -54,7 +54,7 @@ const { title } = Astro.props
 </html>
 
 <style is:global>
-    @font-face {
+  @font-face {
     font-family: 'Manrope';
     font-style: light;
     font-weight: 300;
@@ -255,9 +255,24 @@ const { title } = Astro.props
     align-items: center;
   }
 
+  .highlight-text {
+    font-family: 'Manrope';
+    font-weight: 700;
+    background-image: var(--ml-text-white);
+    text-transform: uppercase;
+  }
+
+  .space-in-text {
+    display: inline-flex;
+    column-gap: 6px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .red-title {
     color: var(--ml-accent-100);
   }
+
   .brightness {
     display: block;
     position: absolute;

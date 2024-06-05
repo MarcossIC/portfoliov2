@@ -1,0 +1,35 @@
+---
+const { class: parentClass } = Astro.props
+---
+
+<div class:list={['bento-item', parentClass]}>
+  <slot />
+</div>
+
+<style>
+  .bento-item {
+    position: relative;
+    box-sizing: border-box;
+    background: #1c0e3b4a;
+    border-radius: 10px;
+    backdrop-filter: blur(35px);
+    outline: 1px solid rgb(168 128 255 / 33%);
+    box-shadow:
+      inset -2px -4px 15px 6px rgb(24 1 62 / 16%),
+      0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .bento-col-1 {
+    width: var(--bento-w-col-1);
+  }
+
+  .bento-col-2 {
+    width: var(--bento-w-col-2);
+    min-width: var(--bento-min-w-col-2);
+    max-width: none;
+  }
+
+  .bento-col-3 {
+    width: var(--bento-w-col-3);
+  }
+</style>

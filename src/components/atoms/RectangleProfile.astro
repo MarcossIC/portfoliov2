@@ -1,0 +1,23 @@
+---
+const { src, loading = 'lazy', decoding = 'async', alt } = Astro.props
+---
+
+<img
+  class='photo'
+  src={src}
+  loading={loading}
+  decoding={decoding}
+  width=' 135px'
+  height='140px'
+  alt={alt}
+/>
+
+<style>
+  .photo {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    min-width: 135px;
+    max-height: 150px;
+  }
+</style>

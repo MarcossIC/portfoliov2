@@ -1,0 +1,42 @@
+---
+const { class: parentClass } = Astro.props
+---
+
+<div class='chip-style' class:list={[parentClass]}>
+  <slot />
+</div>
+
+<style>
+  .chip-style {
+    box-sizing: border-box;
+    background: linear-gradient(
+      299.25deg,
+      rgba(20, 0, 48, 0.175) 27.3%,
+      rgba(50, 17, 106, 0.5) 66.15%
+    );
+    border: 1px solid rgba(33, 0, 87, 0.2);
+    box-shadow:
+      inset -1px -6px 16px rgba(35, 0, 70, 0.25),
+      inset 6px 8px 24px rgba(30, 0, 60, 0.83);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    font-family: 'Manrope';
+    font-weight: 500;
+    color: #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.fixed-style {
+      background: linear-gradient(
+        299.25deg,
+        rgba(20, 0, 48, 0.21) 27.3%,
+        rgba(50, 17, 106, 0.3) 66.15%
+      );
+      border: 1px solid rgba(33, 0, 87, 0.7);
+      box-shadow:
+        inset -1px -6px 16px rgb(35 0 70 / 10%),
+        inset 6px 8px 24px rgb(30 0 60 / 40%);
+    }
+  }
+</style>
