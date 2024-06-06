@@ -20,6 +20,7 @@ import PlusNumber from '../../molecules/PlusNumber.astro'
 import TextWithIcon from '../../molecules/TextWithIcon.astro'
 import BentoItem from '../../templates/BentoItem.astro'
 import ChipTemplate from '../../templates/ChipTemplate.astro'
+import AboutExpirenceCard from './AboutExpirenceCard.astro'
 ---
 
 <div class='bento'>
@@ -38,53 +39,35 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     <div
       class='ps-4 pe-3 mt-4 overflow-auto flex flex-col h-full expirence-box'
     >
-      <div class='flex flex-col mb-2 mt-1'>
-        <h3 class='font-manrope font-medium text-[1.75rem] overflow-ellipsis'>
-          Codefend
-        </h3>
-        <h4 class='font-manrope font-normal text-[1.25rem] overflow-ellipsis'>
-          Front-end developer
-        </h4>
-        <span class='mb-3 overflow-ellipsis'>Jun 2024 - Jul 2024</span>
-        <p class='pb-3'>
-          Led the migration of a project from Solid JS to React. I continued the
-          development of the project, ensuring the timely delivery of new
-          functionalities. Mockup Photoshop designs and implement UX
-          improvements.
-        </p>
-      </div>
+      <AboutExpirenceCard
+        title='Codefend'
+        sub='Front-end developer'
+        date='Jan 2024 - Jul 2024'
+      >
+        Led the migration of a project from Solid JS to React. I continued the
+        development of the project, ensuring the timely delivery of new
+        functionalities. Mockup Photoshop designs and implement UX improvements.
+      </AboutExpirenceCard>
 
-      <div class='flex flex-col mb-2 mt-1'>
-        <h3 class='font-manrope font-medium text-[1.75rem] overflow-ellipsis'>
-          Codefend
-        </h3>
-        <h4 class='font-manrope font-normal text-[1.25rem] overflow-ellipsis'>
-          Front-end developer
-        </h4>
-        <span class='mb-3 overflow-ellipsis'>Jun 2024 - Jul 2024</span>
-        <p class='pb-3'>
-          Led the migration of a project from Solid JS to React. I continued the
-          development of the project, ensuring the timely delivery of new
-          functionalities. Mockup Photoshop designs and implement UX
-          improvements.
-        </p>
-      </div>
+      <AboutExpirenceCard
+        title='No country'
+        sub='Full-stack developer'
+        date='Jun 2023 - Dec 2023'
+      >
+        In the no country job simulations, I worked with spring boot, creating a
+        rest API, with microservices, security, and also worked on the front-end
+        with Angular in a book e-commerce.
+      </AboutExpirenceCard>
 
-      <div class='flex flex-col mb-2 mt-1'>
-        <h3 class='font-manrope font-medium text-[1.75rem] overflow-ellipsis'>
-          Codefend
-        </h3>
-        <h4 class='font-manrope font-normal text-[1.25rem] overflow-ellipsis'>
-          Front-end developer
-        </h4>
-        <span class='mb-3 overflow-ellipsis'>Jun 2024 - Jul 2024</span>
-        <p class='pb-3'>
-          Led the migration of a project from Solid JS to React. I continued the
-          development of the project, ensuring the timely delivery of new
-          functionalities. Mockup Photoshop designs and implement UX
-          improvements.
-        </p>
-      </div>
+      <AboutExpirenceCard
+        title='Internship Facturador++'
+        sub='Back-end developer'
+        date='Jan 2022 - Nov 2022'
+      >
+        Invoicer++ is a project that I did in an internship to deliver to the
+        students of the economics course, to generate commercial documents
+        online quickly, I was doing the back-end with Spring boot
+      </AboutExpirenceCard>
     </div>
   </BentoItem>
   <BentoItem class='bento-col-2 bento-item-3'>
@@ -146,6 +129,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     >
       Stack
     </h2>
+    <img class="mx-auto" src="/img/MyStack.png" alt="Stack" decoding="async" loading="lazy"/>
   </BentoItem>
   <BentoItem class='bento-col-3 bento-item-8'>
     <h3
@@ -346,6 +330,8 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     }
     :global(.bento-item-7) {
       grid-area: developmentAreas;
+      display: flex;
+      flex-direction: column;
     }
     :global(.bento-item-8) {
       grid-area: letsWork;
