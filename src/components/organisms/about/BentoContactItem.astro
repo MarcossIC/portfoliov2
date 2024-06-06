@@ -1,0 +1,36 @@
+---
+import EmailIcon from '../../atoms/EmailIcon.astro'
+import StarIcon from '../../atoms/StarIcon.astro'
+import BentoItem from '../../templates/BentoItem.astro'
+import ChipTemplate from '../../templates/ChipTemplate.astro'
+---
+
+<BentoItem class='bento-item-8'>
+  <h3
+    class='bg-ml-text-white bg-clip-text text-transparent text-[2rem] font-semibold ms-[2rem] mb-8 flex gap-x-1'
+  >
+    <StarIcon /> Let’s Work Together
+  </h3>
+  <button class='w-[90%] py-0 cursor-pointer select-none mx-auto'
+    ><ChipTemplate class='w-full py-3 flex gap-x-3'>
+      <EmailIcon /> Contact me
+    </ChipTemplate></button
+  >
+</BentoItem>
+
+<style>
+  :global(.bento-item-8) {
+    grid-area: letsWork;
+    height: 203px;
+    padding-block-start: 1.5rem;
+    padding-block-end: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: var(--bento-w-col-2);
+  }
+  @media only screen and (min-width: 1700px) {
+    :global(.bento-item-8) {
+      width: var(--bento-w-col-3);
+    }
+  }
+</style>

@@ -1,148 +1,23 @@
 ---
-import Astronaut from '../../atoms/Astronaut.astro'
-import CoffeeIcon from '../../atoms/CoffeeIcon.astro'
-import CountryIcon from '../../atoms/CountryIcon.astro'
-import DevProductivity from '../../atoms/DevProductivity.astro'
-import DevPullRequest from '../../atoms/DevPullRequest.astro'
-import DownloadIcon from '../../atoms/DownloadIcon.astro'
-import EducationIcon from '../../atoms/EducationIcon.astro'
-import EmailIcon from '../../atoms/EmailIcon.astro'
-import GithubWithBGIcon from '../../atoms/GithubWithBGIcon.astro'
-import GlobalIcon from '../../atoms/GlobalIcon.astro'
-import GoodBoyIcon from '../../atoms/GoodBoyIcon.astro'
-import LittlePlant from '../../atoms/LittlePlant.astro'
-import LogoV2 from '../../atoms/LogoV2.astro'
-import PulseElement from '../../atoms/PulseElement.astro'
-import RectangleProfile from '../../atoms/RectangleProfile.astro'
-import ReverseLittlePlant from '../../atoms/ReverseLittlePlant.astro'
-import StarIcon from '../../atoms/StarIcon.astro'
-import PlusNumber from '../../molecules/PlusNumber.astro'
-import TextWithIcon from '../../molecules/TextWithIcon.astro'
-import BentoItem from '../../templates/BentoItem.astro'
-import ChipTemplate from '../../templates/ChipTemplate.astro'
-import AboutExpirenceCard from './AboutExpirenceCard.astro'
+import BentoCenterDecoration from './BentoCenterDecoration.astro'
+import BentoContactItem from './BentoContactItem.astro'
+import BentoExperienceItem from './BentoExperienceItem.astro'
+import BentoExperticeItem from './BentoExperticeItem.astro'
+import BentoMoreProjectsItem from './BentoMoreProjectsItem.astro'
+import BentoProfileItem from './BentoProfileItem.astro'
+import BentoStackItem from './BentoStackItem.astro'
+import BentoWhoIamItem from './BentoWhoIamItem.astro'
 ---
 
 <div class='bento'>
-  <BentoItem class='bento-col-1 bento-item-1'>
-    <PlusNumber number='02' />
-    <ChipTemplate class='w-[240px] h-[48px] text-[24px] mx-auto leading-[25px]'
-      >Years Expertise</ChipTemplate
-    >
-  </BentoItem>
-  <BentoItem class='bento-col-1 bento-item-2'>
-    <h2
-      class='font-manrope bg-ml-text-white font-semibold text-[3rem] pl-[1rem] text-left bg-clip-text text-transparent'
-    >
-      Experience
-    </h2>
-    <div
-      class='ps-4 pe-3 mt-4 overflow-auto flex flex-col h-full expirence-box'
-    >
-      <AboutExpirenceCard
-        title='Codefend'
-        sub='Front-end developer'
-        date='Jan 2024 - Jul 2024'
-      >
-        Led the migration of a project from Solid JS to React. I continued the
-        development of the project, ensuring the timely delivery of new
-        functionalities. Mockup Photoshop designs and implement UX improvements.
-      </AboutExpirenceCard>
-
-      <AboutExpirenceCard
-        title='No country'
-        sub='Full-stack developer'
-        date='Jun 2023 - Dec 2023'
-      >
-        In the no country job simulations, I worked with spring boot, creating a
-        rest API, with microservices, security, and also worked on the front-end
-        with Angular in a book e-commerce.
-      </AboutExpirenceCard>
-
-      <AboutExpirenceCard
-        title='Internship Facturador++'
-        sub='Back-end developer'
-        date='Jan 2022 - Nov 2022'
-      >
-        Invoicer++ is a project that I did in an internship to deliver to the
-        students of the economics course, to generate commercial documents
-        online quickly, I was doing the back-end with Spring boot
-      </AboutExpirenceCard>
-    </div>
-  </BentoItem>
-  <BentoItem class='bento-col-2 bento-item-3'>
-    <div class='flex gap-x-[1.35rem]'>
-      <RectangleProfile src='/img/FOTO_CV.webp' alt='My photo' />
-      <div class='flex flex-col w-full'>
-        <div class='flex justify-between'>
-          <span class='space-in-text'>
-            <PulseElement />
-            Available for work
-          </span>
-          <span class='space-in-text cursor-pointer'
-            >Resume <DownloadIcon /></span
-          >
-        </div>
-        <h2 class='my-name bg-clip-text text-transparent'>Marcos Lopez</h2>
-      </div>
-      <Astronaut />
-    </div>
-    <ChipTemplate
-      class='fixed-style w-auto text-[24px] ml-[10rem] mt-[10px] h-[90px] flex flex-row flex-wrap !justify-start px-[18px] gap-x-[20px]'
-    >
-      <TextWithIcon text='Argentina'><CountryIcon /></TextWithIcon>
-      <TextWithIcon text='IT technician'><EducationIcon /></TextWithIcon>
-      <TextWithIcon text='Spanish & English'><GlobalIcon /></TextWithIcon>
-      <TextWithIcon text='A good boy' addSpace><GoodBoyIcon /></TextWithIcon>
-      <TextWithIcon text='I love a coffee'><CoffeeIcon /></TextWithIcon>
-    </ChipTemplate>
-  </BentoItem>
-  <BentoItem class='bento-col-2 bento-item-4'>
-    <LittlePlant />
-    <DevProductivity />
-    <LogoV2 />
-    <DevPullRequest />
-    <ReverseLittlePlant />
-  </BentoItem>
-  <BentoItem class='bento-col-2 bento-item-5'>
-    <h2 class='title bg-clip-text text-transparent'>Who I am?</h2>
-    <p>
-      I am a computer technician, passionate about programming and technology.
-      Experienced in software architecture, API creation, and web design.
-      Proficient in agile methodologies and team collaboration. Always eager to
-      learn and explore new technologies.
-    </p>
-  </BentoItem>
-  <BentoItem class='bento-col-3 bento-item-6'>
-    <h2 class='title bg-clip-text text-transparent'>More porjects</h2>
-    <p class='text'>You can find more of my projects on github</p>
-    <div
-      class='github-btn justify-center items-center ml-auto mt-4 cursor-pointer'
-    >
-      <GithubWithBGIcon />
-      <span>Go to github</span>
-    </div>
-  </BentoItem>
-  <BentoItem class='bento-col-3 bento-item-7'>
-    <h2
-      class='font-manrope bg-ml-text-white font-semibold text-[3rem] pl-[1rem] text-left bg-clip-text text-transparent'
-    >
-      Stack
-    </h2>
-    <img class="mx-auto" src="/img/MyStack.png" alt="Stack" decoding="async" loading="lazy"/>
-  </BentoItem>
-  <BentoItem class='bento-col-3 bento-item-8'>
-    <h3
-      class='title bg-clip-text text-transparent text-[2rem] font-semibold ms-[2rem] mb-8 flex gap-x-1'
-    >
-      <StarIcon /> Let’s Work Together
-    </h3>
-    <button class='w-[90%] py-0 cursor-pointer select-none mx-auto'
-      ><ChipTemplate class='w-full py-3 flex gap-x-3'>
-        <EmailIcon /> Contact me
-      </ChipTemplate></button
-    >
-  </BentoItem>
+  <BentoExperticeItem />
+  <BentoExperienceItem />
+  <BentoProfileItem />
+  <BentoCenterDecoration />
+  <BentoWhoIamItem />
+  <BentoMoreProjectsItem />
+  <BentoStackItem />
+  <BentoContactItem />
 </div>
 
 <style>
@@ -151,9 +26,11 @@ import AboutExpirenceCard from './AboutExpirenceCard.astro'
     --bento-h: auto;
     --bento-min-w: 1534px;
 
-    --bento-w-col-1: 305px;
+    --bento-w-col-1: 100%;
+    --bento-min-w-col-1: 100px;
+    --bento-max-w-col-1: 350px;
     --bento-w-col-2: 100%;
-    --bento-min-w-col-2: 810px;
+    --bento-min-w-col-2: 300px;
     --bento-w-col-3: 430px;
   }
   .bento {
@@ -168,178 +45,36 @@ import AboutExpirenceCard from './AboutExpirenceCard.astro'
     justify-content: center;
 
     grid-template:
-      'yearsExpirence  devProfile   morePorjects '
-      'yearsExpirence  devProfile   morePorjects '
-      'devStack        devProfile   developmentAreas '
-      'devStack        logoIam      developmentAreas '
-      'devStack        whoIam       developmentAreas '
-      'devStack        whoIam       letsWork '
-      'devStack        whoIam       letsWork ';
+      'yearsExpirence  devProfile   '
+      'yearsExpirence  devProfile   '
+      'devStack        devProfile   '
+      'devStack        logoIam      '
+      'devStack        whoIam       '
+      'devStack        whoIam       '
+      'devStack        whoIam       '
+      'developmentAreas morePorjects'
+      'developmentAreas letsWork        ';
+  }
 
-    :global(.bento-item-1) {
-      grid-area: yearsExpirence;
-      height: 200px;
+  @media only screen and (min-width: 1225px) {
+    .bento {
+      --bento-w-col-1: 430px;
+      --bento-max-w-col-1: none;
     }
+  }
 
-    :global(.bento-item-2) {
-      grid-area: devStack;
-      height: 490px;
-      overflow: hidden;
-      padding-block-end: 90px;
-
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-      }
-
-      .expirence-box::-webkit-scrollbar {
-        width: 12px;
-        background-color: transparent;
-      }
-
-      .expirence-box::-webkit-scrollbar-thumb {
-        background-color: #4102669f;
-        border-radius: 6px;
-      }
-
-      .expirence-box::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
-      .expirence-box::-webkit-scrollbar-button {
-        display: none;
-      }
-
-      .expirence-box {
-        scrollbar-width: thin;
-        scrollbar-color: #4102669f transparent;
-      }
-    }
-    :global(.bento-item-3) {
-      grid-area: devProfile;
-      height: 290px;
-      display: flex;
-      flex-direction: column;
-      padding: 1.3rem;
-
-      .my-name {
-        font-size: 3.15rem;
-        max-width: 200px;
-        font-weight: 700;
-        line-height: 60px;
-        background-image: var(--ml-text-white);
-      }
-      :global(#astronaut) {
-        position: absolute;
-        z-index: 5;
-        right: 120px;
-        top: 0px;
-      }
-    }
-    .title {
-      background-image: var(--ml-text-white);
-    }
-    :global(.bento-item-4) {
-      grid-area: logoIam;
-      height: 135px;
-      display: flex;
-
-      :global(.logo) {
-        justify-content: center;
-
-        :global(img) {
-          width: 140px;
-        }
-      }
-
-      :global(#normal-plant) {
-        position: absolute;
-        bottom: 1px;
-        left: -8px;
-      }
-      :global(#reverse-plant) {
-        position: absolute;
-        bottom: 1px;
-        right: -8px;
-      }
-      :global(#dev-productivity) {
-        position: absolute;
-        top: -12px;
-        left: 28px;
-      }
-      :global(#dev-pull-req) {
-        position: absolute;
-        top: -12px;
-        right: 100px;
-      }
-    }
-    :global(.bento-item-5) {
-      grid-area: whoIam;
-      height: 240px;
-      padding-inline-start: 30px;
-      padding-block-start: 10px;
-
-      .title {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-block-end: 0.5rem;
-      }
-
-      p {
-        line-height: 30px;
-        font-size: 1.2rem;
-        max-width: 735px;
-      }
-    }
-    :global(.bento-item-6) {
-      grid-area: morePorjects;
-      height: 200px;
-      padding: 1rem;
-      padding-inline-start: 1.75rem;
-
-      .title {
-        font-weight: 600;
-        font-size: 3rem;
-        margin-block-end: 0.2rem;
-      }
-
-      .text {
-        font-size: 1rem;
-        max-width: 190px;
-        letter-spacing: 0.3px;
-        word-spacing: 0.5px;
-      }
-
-      .github-btn {
-        display: flex;
-        column-gap: 10px;
-        width: 168px;
-        height: 42px;
-        background: linear-gradient(
-          88.61deg,
-          rgba(12, 11, 11, 0.79) 8.26%,
-          #000000 99.14%
-        );
-        border-radius: 20px;
-
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: #ffffff;
-      }
-    }
-    :global(.bento-item-7) {
-      grid-area: developmentAreas;
-      display: flex;
-      flex-direction: column;
-    }
-    :global(.bento-item-8) {
-      grid-area: letsWork;
-      height: 203px;
-      padding-block-start: 1.5rem;
-      padding-block-end: 1rem;
-      display: flex;
-      flex-direction: column;
+  @media only screen and (min-width: 1700px) {
+    .bento {
+      --bento-min-w-col-2: 810px;
+      --bento-w-col-1: 305px;
+      grid-template:
+        'yearsExpirence  devProfile   morePorjects '
+        'yearsExpirence  devProfile   morePorjects '
+        'devStack        devProfile   developmentAreas '
+        'devStack        logoIam      developmentAreas '
+        'devStack        whoIam       developmentAreas '
+        'devStack        whoIam       letsWork '
+        'devStack        whoIam       letsWork ';
     }
   }
 </style>

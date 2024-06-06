@@ -1,0 +1,59 @@
+---
+import DevProductivity from '../../atoms/DevProductivity.astro'
+import DevPullRequest from '../../atoms/DevPullRequest.astro'
+import LittlePlant from '../../atoms/LittlePlant.astro'
+import LogoV2 from '../../atoms/LogoV2.astro'
+import ReverseLittlePlant from '../../atoms/ReverseLittlePlant.astro'
+import BentoItem from '../../templates/BentoItem.astro'
+---
+
+<BentoItem class='bento-col-2 bento-item-4'>
+  <LittlePlant />
+  <DevProductivity />
+  <LogoV2 />
+  <DevPullRequest />
+  <ReverseLittlePlant />
+</BentoItem>
+
+<style>
+  :global(.bento-item-4) {
+    grid-area: logoIam;
+    height: 135px;
+    display: flex;
+    max-width: 750px;
+
+    :global(.logo) {
+      justify-content: center;
+
+      :global(img) {
+        width: 140px;
+      }
+    }
+
+    :global(#normal-plant) {
+      position: absolute;
+      bottom: 1px;
+      left: -8px;
+    }
+    :global(#reverse-plant) {
+      position: absolute;
+      bottom: 1px;
+      right: -8px;
+    }
+    :global(#dev-productivity) {
+      position: absolute;
+      top: -12px;
+      left: 28px;
+    }
+    :global(#dev-pull-req) {
+      position: absolute;
+      top: -12px;
+      right: 100px;
+    }
+  }
+  @media only screen and (min-width: 1700px) {
+    :global(.bento-item-4) {
+      max-width: none;
+    }
+  }
+</style>

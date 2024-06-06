@@ -1,0 +1,22 @@
+---
+import PlusNumber from '../../molecules/PlusNumber.astro'
+import BentoItem from '../../templates/BentoItem.astro'
+import ChipTemplate from '../../templates/ChipTemplate.astro'
+---
+
+<BentoItem class='bento-item-1'>
+  <PlusNumber number='02' />
+  <ChipTemplate class='w-[240px] h-[48px] text-[24px] mx-auto leading-[25px]'
+    >Years Expertise</ChipTemplate
+  >
+</BentoItem>
+
+<style>
+  :global(.bento-item-1) {
+    grid-area: yearsExpirence;
+    height: 200px;
+    width: var(--bento-w-col-1);
+    max-width: var(--bento-max-w-col-1);
+    min-width: var(--bento-min-w-col-1);
+  }
+</style>

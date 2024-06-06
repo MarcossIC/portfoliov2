@@ -1,0 +1,43 @@
+---
+import BentoItem from '../../templates/BentoItem.astro'
+---
+
+<BentoItem class='bento-col-2 bento-item-5'>
+  <h2 class='bg-ml-text-white title bg-clip-text text-transparent'>
+    Who I am?
+  </h2>
+  <p>
+    I am a computer technician, passionate about programming and technology.
+    Experienced in software architecture, API creation, and web design.
+    Proficient in agile methodologies and team collaboration. Always eager to
+    learn and explore new technologies.
+  </p>
+</BentoItem>
+
+<style>
+  :global(.bento-item-5) {
+    grid-area: whoIam;
+    height: 240px;
+    padding-inline-start: 30px;
+    padding-block-start: 10px;
+    max-width: 750px;
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-block-end: 0.5rem;
+    }
+
+    p {
+      line-height: 30px;
+      font-size: 1.2rem;
+      max-width: 735px;
+      padding-inline-end: 12px;
+    }
+  }
+  @media only screen and (min-width: 1700px) {
+    :global(.bento-item-5) {
+      max-width: none;
+    }
+  }
+</style>

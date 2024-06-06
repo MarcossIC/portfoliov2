@@ -1,0 +1,36 @@
+---
+import BentoItem from '../../templates/BentoItem.astro'
+---
+
+<BentoItem class='bento-item-7'>
+  <h2
+    class='font-manrope bg-ml-text-white font-semibold text-[3rem] pl-[1rem] text-left bg-clip-text text-transparent'
+  >
+    Stack
+  </h2>
+  <img
+    class='mx-auto'
+    src='/img/MyStack.png'
+    alt='Stack'
+    decoding='async'
+    loading='lazy'
+  />
+</BentoItem>
+
+<style>
+  :global(.bento-item-7) {
+    grid-area: developmentAreas;
+    display: flex;
+    flex-direction: column;
+    width: var(--bento-w-col-1);
+    max-width: var(--bento-max-w-col-1);
+    min-width: var(--bento-min-w-col-1);
+  }
+
+  @media only screen and (min-width: 1700px) {
+    :global(.bento-item-7) {
+      width: var(--bento-w-col-3);
+      max-width: none;
+    }
+  }
+</style>
