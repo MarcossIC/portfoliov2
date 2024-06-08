@@ -23,7 +23,7 @@ import BentoItem from '../../templates/BentoItem.astro'
     padding: 1rem;
     padding-inline-start: 1.75rem;
     width: var(--bento-w-col-2);
-    max-width: 750px;
+    max-width: var(--bento-max-w-col-2);
 
     .title {
       font-weight: 600;
@@ -59,7 +59,7 @@ import BentoItem from '../../templates/BentoItem.astro'
     }
   }
 
-  @media only screen and (min-width: 1700px) {
+  @media only screen and (min-width: 1480px) {
     :global(.bento-item-6) {
       width: var(--bento-w-col-3);
       max-width: none;

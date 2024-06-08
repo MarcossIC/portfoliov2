@@ -30,7 +30,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     <Astronaut />
   </div>
   <ChipTemplate
-    class='fixed-style w-auto text-[24px] ml-[.25rem] mt-[10px] h-[90px] flex flex-row flex-wrap !justify-start px-[18px] gap-x-[20px] min-[1225px]:ml-[10rem]'
+    class='fixed-style w-auto text-[24px] ml-[.25rem] mt-[10px] h-[90px] flex flex-row flex-wrap !justify-start px-[18px] gap-x-[15px] min-[1225px]:gap-x-[20px] min-[1225px]:ml-[10rem]'
   >
     <TextWithIcon text='Argentina'><CountryIcon /></TextWithIcon>
     <TextWithIcon text='IT technician'><EducationIcon /></TextWithIcon>
@@ -47,7 +47,6 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     display: flex;
     flex-direction: column;
     padding: 1.3rem;
-    max-width: 750px;
     --astronaut-right: 10%;
 
     .my-name {
@@ -74,9 +73,8 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     }
   }
 
-  @media only screen and (min-width: 1700px) {
+  @media only screen and (min-width: 1480px) {
     :global(.bento-item-3) {
-      max-width: none;
       --astronaut-right: 120px;
     }
   }

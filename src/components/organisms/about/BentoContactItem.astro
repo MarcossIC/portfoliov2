@@ -27,10 +27,12 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     display: flex;
     flex-direction: column;
     width: var(--bento-w-col-2);
+    max-width: var(--bento-max-w-col-2);
   }
-  @media only screen and (min-width: 1700px) {
+  @media only screen and (min-width: 1480px) {
     :global(.bento-item-8) {
       width: var(--bento-w-col-3);
+      max-width: none;
     }
   }
 </style>

@@ -162,7 +162,7 @@ const { title } = Astro.props
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-inline: 6dvw;
+    margin-inline: 10px;
 
     background: #0f0227;
     font-family:
@@ -172,14 +172,18 @@ const { title } = Astro.props
       sans-serif;
     color: #f5f5f5;
     min-height: 100dvh;
-    max-width: 100dvw;
     direction: ltr;
 
     scroll-behavior: smooth;
     overflow-x: hidden;
-    outline: none;
     overscroll-behavior-x: none;
     touch-action: manipulation;
+  }
+
+  @media only screen and (min-width: 980px) {
+    body {
+      margin-inline: 6dvw;
+    }
   }
 
   h1,

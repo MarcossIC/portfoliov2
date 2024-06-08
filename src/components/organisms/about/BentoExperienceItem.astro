@@ -45,7 +45,7 @@ import AboutExpirenceCard from './AboutExpirenceCard.astro'
 <style>
   :global(.bento-item-2) {
     grid-area: devStack;
-    height: 490px;
+    height: 530px;
     overflow: hidden;
     padding-block-end: 90px;
     width: var(--bento-w-col-1);
@@ -76,6 +76,11 @@ import AboutExpirenceCard from './AboutExpirenceCard.astro'
     .expirence-box {
       scrollbar-width: thin;
       scrollbar-color: #4102669f transparent;
+    }
+  }
+  @media only screen and (min-width: 1020px) {
+    :global(.bento-item-2) {
+      height: 490px;
     }
   }
 </style>

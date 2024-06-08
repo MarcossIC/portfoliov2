@@ -9,8 +9,8 @@ import ResumeButton from '../molecules/ResumeButton.astro'
     <LogoV2 />
     
     <nav class='navigation'>
-      <Navigate text='Home' to='/' />
-      <Navigate text='About' to='/' />
+      <Navigate text='Projects' to='#projects' />
+      <Navigate text='About' to='#about' />
       <Navigate text='Contact' to='/' />
     </nav>
 
@@ -46,7 +46,7 @@ import ResumeButton from '../molecules/ResumeButton.astro'
     align-items: center;
     justify-content: space-between;
 
-    padding-inline: 0.625rem;
+    padding-inline: 6dvw;
   }
 
   .navigation {
@@ -69,12 +69,6 @@ import ResumeButton from '../molecules/ResumeButton.astro'
     padding-block-end: 3px;
   }
 
-  @media only screen and (min-width: 500px) {
-    .header-container {
-      padding: 0 40px;
-    }
-  }
-
   @media only screen and (min-width: 841px) {
     .resume-btn {
       display: flex;
@@ -95,7 +89,6 @@ import ResumeButton from '../molecules/ResumeButton.astro'
   @media only screen and (min-width: 1140px) {
     .header-container {
       justify-content: space-around;
-      padding: 0;
     }
   }
 

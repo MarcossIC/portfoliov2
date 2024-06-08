@@ -22,16 +22,19 @@ import BentoWhoIamItem from './BentoWhoIamItem.astro'
 
 <style>
   .bento {
-    --bento-w: 100%;
+    --bento-w: 99%;
     --bento-h: auto;
     --bento-min-w: 1534px;
 
     --bento-w-col-1: 100%;
     --bento-min-w-col-1: 100px;
     --bento-max-w-col-1: 350px;
+
     --bento-w-col-2: 100%;
     --bento-min-w-col-2: 300px;
-    --bento-w-col-3: 430px;
+    --bento-max-w-col-2: none;
+
+    --bento-w-col-3: 400px;
   }
   .bento {
     display: grid;
@@ -45,15 +48,16 @@ import BentoWhoIamItem from './BentoWhoIamItem.astro'
     justify-content: center;
 
     grid-template:
-      'yearsExpirence  devProfile   '
-      'yearsExpirence  devProfile   '
-      'devStack        devProfile   '
-      'devStack        logoIam      '
-      'devStack        whoIam       '
-      'devStack        whoIam       '
-      'devStack        whoIam       '
-      'developmentAreas morePorjects'
-      'developmentAreas letsWork        ';
+      'devProfile        devProfile        '
+      'devProfile        devProfile        '
+      'yearsExpirence    logoIam           '
+      'whoIam            whoIam            '
+      'whoIam            whoIam            '
+      'devStack          devStack          '
+      'devStack          devStack          '
+      'developmentAreas  developmentAreas  '
+      'morePorjects      morePorjects      '
+      'morePorjects      morePorjects      ';
   }
 
   @media only screen and (min-width: 1225px) {
@@ -62,11 +66,26 @@ import BentoWhoIamItem from './BentoWhoIamItem.astro'
       --bento-max-w-col-1: none;
     }
   }
-
-  @media only screen and (min-width: 1700px) {
+  @media only screen and (min-width: 850px) {
     .bento {
-      --bento-min-w-col-2: 810px;
-      --bento-w-col-1: 305px;
+      grid-template:
+        'yearsExpirence   devProfile   '
+        'yearsExpirence   devProfile   '
+        'devStack         devProfile   '
+        'devStack         logoIam      '
+        'devStack         whoIam       '
+        'devStack         whoIam       '
+        'devStack         whoIam       '
+        'developmentAreas morePorjects '
+        'letsWork         letsWork     ';
+    }
+  }
+
+  @media only screen and (min-width: 1480px) {
+    .bento {
+      --bento-w-col-1: 292px;
+      --bento-min-w-col-2: 625px;
+      --bento-max-w-col-2: 700px;
       grid-template:
         'yearsExpirence  devProfile   morePorjects '
         'yearsExpirence  devProfile   morePorjects '
@@ -75,6 +94,15 @@ import BentoWhoIamItem from './BentoWhoIamItem.astro'
         'devStack        whoIam       developmentAreas '
         'devStack        whoIam       letsWork '
         'devStack        whoIam       letsWork ';
+    }
+  }
+
+  @media only screen and (min-width: 1700px) {
+    .bento {
+      --bento-w-col-1: 305px;
+      --bento-min-w-col-2: 810px;
+      --bento-max-w-col-2: none;
+      --bento-w-col-3: 430px;
     }
   }
 </style>

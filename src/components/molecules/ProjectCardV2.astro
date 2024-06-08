@@ -36,7 +36,7 @@ const { url, name, desc, id } = Astro.props
   }
   .project-card-container {
     position: relative;
-    width: 100%;
+    width: fit-content;
     height: 100%;
     position: relative;
     overflow: visible;
@@ -62,5 +62,10 @@ const { url, name, desc, id } = Astro.props
     font-size: 0.9rem;
     line-height: 24px;
     max-width: 542px;
+  }
+  @media only screen and (min-width: 1200px) {
+    .project-card-container {
+      width: 100%;
+    }
   }
 </style>

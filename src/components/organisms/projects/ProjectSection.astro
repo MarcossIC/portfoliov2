@@ -4,6 +4,7 @@ import ProjectCardV2 from '../../molecules/ProjectCardV2.astro'
 ---
 
 <section
+id="projects"
   class='max-w-[100vw] flex flex-col w-full flex-1 justify-center items-center'
 >
   <SecondTitle sub='A small selection of some of my latest works'
@@ -75,25 +76,18 @@ import ProjectCardV2 from '../../molecules/ProjectCardV2.astro'
   }
 
   .projects {
-    display: grid;
-    width: 1128px;
+    width: 100%;
     max-width: 1128px;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 132px;
     justify-items: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto auto auto;
-    grid-template-rows: auto auto auto;
+
     margin-block-start: 3rem;
+
+    display: flex;
+    flex-flow: nowrap column;
   }
 
   .project-grid {
@@ -102,21 +96,42 @@ import ProjectCardV2 from '../../molecules/ProjectCardV2.astro'
     width: 100%;
     height: 100%;
 
-    -ms-grid-column-span: 1;
-    grid-column-end: span 1;
-    -ms-grid-row: span 1;
-    grid-row-start: span 1;
-    -ms-grid-row-span: 1;
-    grid-row-end: span 1;
+    display: flex;
+    justify-content: center;
   }
 
   .grid-el-1 {
   }
-  .grid-el-2 {
-    margin-block-start: 11.25rem;
-  }
+   .grid-el-1 ,
+   .grid-el-2,
   .grid-el-3 {
-    margin-block-start: -11.25rem;
+    margin-block-start: 0rem;
+    margin-block-end: 4rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .projects {
+      display: grid;
+      width: 1128px;
+      grid-auto-columns: 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+    }
+
+    .project-grid {
+      display: block;
+      grid-column-end: span 1;
+      grid-row-start: span 1;
+      grid-row-end: span 1;
+    }
+    .grid-el-2 {
+      margin-block-start: 11.25rem;
+    }
+    .grid-el-3 {
+      margin-block-start: -11.25rem;
+    }
   }
 </style>
 
