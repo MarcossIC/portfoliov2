@@ -1,5 +1,5 @@
 ---
-import GithubWithBGIcon from '../../atoms/GithubWithBGIcon.astro'
+import OutlineGithubIcon from '../../atoms/OutlineGithubIcon.astro'
 import BentoItem from '../../templates/BentoItem.astro'
 ---
 
@@ -8,12 +8,14 @@ import BentoItem from '../../templates/BentoItem.astro'
     More porjects
   </h2>
   <p class='text'>You can find more of my projects on github</p>
-  <div
+  <a
+    href='https://github.com/MarcossIC'
+    target='_blank'
     class='github-btn justify-center items-center mx-auto min-[1135px]:mr-0 min-[1135px]:ml-auto cursor-pointer'
   >
-    <GithubWithBGIcon />
+    <OutlineGithubIcon />
     <span>Go to github</span>
-  </div>
+  </a>
 </BentoItem>
 
 <style>

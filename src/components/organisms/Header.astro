@@ -6,20 +6,12 @@ import ResumeButton from '../molecules/ResumeButton.astro'
 
 <header id='header'>
   <div class='header-container'>
-    <LogoV2 />
     
     <nav class='navigation'>
       <Navigate text='Projects' to='#projects' />
       <Navigate text='About' to='#about' />
       <Navigate text='Contact' to='/' />
     </nav>
-
-    <div class='resume-btn'>
-      <ResumeButton
-        to='https://drive.google.com/file/d/1znfQJffUhuawHnsKnSUGa6aGtnA9q1OY/view?usp=sharing'
-        ><span>View resume</span></ResumeButton
-      >
-    </div>
   </div>
 </header>
 
@@ -53,7 +45,7 @@ import ResumeButton from '../molecules/ResumeButton.astro'
     font-weight: 500;
     display: flex;
     justify-self: center;
-    column-gap: 2.75rem;
+    column-gap: 3rem;
     flex: 1 1;
     justify-content: center;
     padding-block-end: 3px;
