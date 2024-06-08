@@ -25,9 +25,14 @@ const { url, id } = Astro.props
 
 <style>
   .project-img {
+    --project-img-w: 100%;
+    --project-img-h: 450px;
+    --container-img-w: 380px;
+    --container-img-h: 390px;
+
     position: relative;
-    width: 533px;
-    height: 500px;
+    width: var(--project-img-w);
+    height: var(--project-img-h);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,8 +79,8 @@ const { url, id } = Astro.props
     }
   }
   .img-container {
-    width: 400px;
-    height: 400px;
+    width: var(--container-img-w);
+    height: var(--container-img-h);
     background-color: #fff;
     margin-inline: auto;
     border-radius: 0.5rem;
@@ -101,6 +106,15 @@ const { url, id } = Astro.props
       .project-atropos-content {
         scale: 1;
       }
+    }
+  }
+
+  @media only screen and (min-width: 560px) {
+    .project-img {
+      --project-img-w: 533px;
+      --project-img-h: 500px;
+      --container-img-w: 400px;
+      --container-img-h: 400px;
     }
   }
 </style>

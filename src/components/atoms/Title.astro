@@ -13,18 +13,24 @@
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
-    line-height: clamp(3rem, 18dvw, 6.5rem);
+    line-height: 4.45rem;
     margin-block-start: 1rem;
 
     @media only screen and (min-width: 700px) {
       & {
-        line-height: 7rem;
+        line-height: clamp(3rem, 18dvw, 6.5rem);
       }
     }
 
-    @media only screen and (min-width: 1190px) {
+    @media only screen and (min-width: 1340px) {
       & {
-        line-height: 8.5rem;
+        line-height: 6.5rem;
+      }
+    }
+
+    @media only screen and (min-width: 1600px) {
+      & {
+        line-height: 8rem;
       }
     }
   }

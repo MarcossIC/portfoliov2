@@ -15,9 +15,9 @@ id="projects"
     <article class='project-grid grid-el-1'>
       <ProjectCardV2
         id='project-codefend'
-        url='/img/CODEFEND-PROJECT.png'
+        url='/img/CODEFEND-PROJECT.webp'
         name='Codefend'
-        desc='Codefend is a web app where you work on the frontend, this SaaS, in which it allows companies to upload their resources and codefend offers providers to carry out security tests to deliver reports to the company'
+        desc='Codefend is a webapp where I was working on the frontend, it allows companies to upload their resources, applications and request a pentest, codefend will provide a provider that scans these. It also offers intelligence services'
       />
     </article>
     <article class='project-grid grid-el-2'>
@@ -25,7 +25,7 @@ id="projects"
         id='project-gamegalaxy'
         url='/img/GAME-GALAXY-PROJECT.png'
         name='Game Galaxy'
-        desc='It is a small platform where you can play some simple classic games, such as tetris, snakeling.'
+        desc="It's a small platform I made to be able to play some simple classic games, like tetris, snakeling, from the web."
       />
     </article>
     <article class='project-grid grid-el-3'>
@@ -42,6 +42,22 @@ id="projects"
         url='/img/GPT-WEB-PROJECT.png'
         name='GPT Landing'
         desc='It is a landing page that shows information about the GPT 3 release, it only shows simulated information with a nice design.'
+      />
+    </article>
+    <article class='project-grid grid-el-5'>
+      <ProjectCardV2
+        id='project-invoicer'
+        url='/img/FACTURADOR-MASMAS-PROJECT.webp'
+        name='Invoicer++'
+        desc='Invoicer++ is an open source application to generate commercial documents, created for students who are learning to create these, so they do not need to waste time and can save time.'
+      />
+    </article>
+    <article class='project-grid grid-el-6'>
+      <ProjectCardV2
+        id='project-invoicer'
+        url='/img/CASH_NOW_PROJECT.png'
+        name='Cash Now'
+        desc='At Cash Now I was working on the backend, this webapp was created to allow people to request a loan from a financial institution, be able to manage the installments and have an interest calculator on the loans.'
       />
     </article>
   </div>
@@ -104,7 +120,7 @@ id="projects"
   }
    .grid-el-1 ,
    .grid-el-2,
-  .grid-el-3 {
+  .grid-el-3,.grid-el-4,.grid-el-5 {
     margin-block-start: 0rem;
     margin-block-end: 4rem;
   }
@@ -114,7 +130,7 @@ id="projects"
       display: grid;
       width: 1128px;
       grid-auto-columns: 1fr;
-      grid-column-gap: 16px;
+      grid-column-gap: 40px;
       grid-row-gap: 16px;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto;
@@ -130,7 +146,16 @@ id="projects"
       margin-block-start: 11.25rem;
     }
     .grid-el-3 {
-      margin-block-start: -11.25rem;
+      margin-block-start: -15rem;
+    }
+    .grid-el-4 {
+      margin-block-start: -5rem;
+    }
+     .grid-el-5 {
+      margin-block-start: -1rem;
+    }
+    .grid-el-6 {
+      margin-block-start: 12.5rem;
     }
   }
 </style>
