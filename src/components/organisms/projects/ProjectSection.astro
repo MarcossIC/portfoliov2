@@ -1,10 +1,16 @@
 ---
+import AngularIcon from '../../atoms/AngularIcon.astro'
+import Css3Icon from '../../atoms/Css3Icon.astro'
+import ReactIcon from '../../atoms/ReactIcon.astro'
+import SassIcon from '../../atoms/SassIcon.astro'
 import SecondTitle from '../../atoms/SecondTitle.astro'
+import SpringIcon from '../../atoms/SpringIcon.astro'
+import TailwindIcon from '../../atoms/TailwindIcon.astro'
 import ProjectCardV2 from '../../molecules/ProjectCardV2.astro'
 ---
 
 <section
-id="projects"
+  id='projects'
   class='max-w-[100vw] flex flex-col w-full flex-1 justify-center items-center'
 >
   <SecondTitle sub='A small selection of some of my latest works'
@@ -18,7 +24,8 @@ id="projects"
         url='/img/CODEFEND-PROJECT.webp'
         name='Codefend'
         desc='Codefend is a webapp where I was working on the frontend, it allows companies to upload their resources, applications and request a pentest, codefend will provide a provider that scans these. It also offers intelligence services'
-      />
+        ><ReactIcon /><SassIcon /></ProjectCardV2
+      >
     </article>
     <article class='project-grid grid-el-2'>
       <ProjectCardV2
@@ -26,7 +33,8 @@ id="projects"
         url='/img/GAME-GALAXY-PROJECT.png'
         name='Game Galaxy'
         desc="It's a small platform I made to be able to play some simple classic games, like tetris, snakeling, from the web."
-      />
+        ><AngularIcon /><Css3Icon /><TailwindIcon /></ProjectCardV2
+      >
     </article>
     <article class='project-grid grid-el-3'>
       <ProjectCardV2
@@ -34,7 +42,9 @@ id="projects"
         url='/img/BOOKS-LEAKS-PROJECT.png'
         name='Books Leaks'
         desc='This is an Ecommerce for purchasing books, with a shopping cart, search with filters and administrative dashboard'
-      />
+        ><AngularIcon /><Css3Icon /><TailwindIcon /><SpringIcon
+        /></ProjectCardV2
+      >
     </article>
     <article class='project-grid grid-el-4'>
       <ProjectCardV2
@@ -42,7 +52,8 @@ id="projects"
         url='/img/GPT-WEB-PROJECT.png'
         name='GPT Landing'
         desc='It is a landing page that shows information about the GPT 3 release, it only shows simulated information with a nice design.'
-      />
+        ><AngularIcon /><Css3Icon /><TailwindIcon /></ProjectCardV2
+      >
     </article>
     <article class='project-grid grid-el-5'>
       <ProjectCardV2
@@ -50,7 +61,8 @@ id="projects"
         url='/img/FACTURADOR-MASMAS-PROJECT.webp'
         name='Invoicer++'
         desc='Invoicer++ is an open source application to generate commercial documents, created for students who are learning to create these, so they do not need to waste time and can save time.'
-      />
+        ><ReactIcon /><SassIcon /><SpringIcon /></ProjectCardV2
+      >
     </article>
     <article class='project-grid grid-el-6'>
       <ProjectCardV2
@@ -58,7 +70,9 @@ id="projects"
         url='/img/CASH_NOW_PROJECT.png'
         name='Cash Now'
         desc='At Cash Now I was working on the backend, this webapp was created to allow people to request a loan from a financial institution, be able to manage the installments and have an interest calculator on the loans.'
-      />
+        ><AngularIcon /><Css3Icon /><TailwindIcon /><SpringIcon
+        /></ProjectCardV2
+      >
     </article>
   </div>
 </section>
@@ -118,9 +132,11 @@ id="projects"
 
   .grid-el-1 {
   }
-   .grid-el-1 ,
-   .grid-el-2,
-  .grid-el-3,.grid-el-4,.grid-el-5 {
+  .grid-el-1,
+  .grid-el-2,
+  .grid-el-3,
+  .grid-el-4,
+  .grid-el-5 {
     margin-block-start: 0rem;
     margin-block-end: 4rem;
   }
@@ -151,7 +167,7 @@ id="projects"
     .grid-el-4 {
       margin-block-start: -5rem;
     }
-     .grid-el-5 {
+    .grid-el-5 {
       margin-block-start: -1rem;
     }
     .grid-el-6 {

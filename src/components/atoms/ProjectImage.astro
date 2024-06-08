@@ -1,4 +1,5 @@
 ---
+
 interface Props {
   url: string
   id: string
@@ -20,6 +21,9 @@ const { url, id } = Astro.props
         </div>
       </div>
     </div>
+  </div>
+  <div class="flex flex-nowrap gap-x-4 absolute left-[5%] bottom-[1.75%]">
+    <slot />
   </div>
 </picture>
 
