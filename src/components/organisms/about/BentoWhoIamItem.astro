@@ -17,9 +17,11 @@ import BentoItem from '../../templates/BentoItem.astro'
 <style>
   :global(.bento-item-5) {
     grid-area: whoIam;
-    height: 280px;
+    height: 285px;
     padding-inline-start: 30px;
     padding-block-start: 10px;
+    --text-max-w: 735px;
+    --text-p-end: 0px;
 
     .title {
       font-size: 3rem;
@@ -30,13 +32,36 @@ import BentoItem from '../../templates/BentoItem.astro'
     p {
       line-height: 30px;
       font-size: 1.2rem;
-      max-width: 735px;
+      max-width: var(--text-max-w);
       padding-inline-end: 12px;
+      padding-block-end: var(--text-p-end);
     }
   }
-  @media only screen and (min-width: 1020px){
+
+    @media only screen and (min-width: 550px) {
+    :global(.bento-item-5) {
+      height: 265px;
+    }
+  }
+
+  @media only screen and (min-width: 840px) {
+    :global(.bento-item-5) {
+      height: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 1020px) {
+    :global(.bento-item-5) {
+      --text-max-w: 810px;
+      --text-p-end: 8px;
+    }
+  }
+
+  @media only screen and (min-width: 1480px) {
     :global(.bento-item-5) {
       height: 240px;
+      --text-max-w: 735px;
+      --text-p-end: 0px;
     }
   }
 </style>

@@ -6,7 +6,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
 
 <BentoItem class='bento-item-1'>
   <PlusNumber number='02' />
-  <ChipTemplate class='w-[240px] h-[48px] text-[24px] mx-auto leading-[25px]'
+  <ChipTemplate class='w-[220px] min-[840px]:w-[240px] h-[48px] text-[24px] mx-auto leading-[25px]'
     >Years Expertise</ChipTemplate
   >
 </BentoItem>
@@ -16,7 +16,19 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     grid-area: yearsExpirence;
     height: 200px;
     width: var(--bento-w-col-1);
-    max-width: var(--bento-max-w-col-1);
-    min-width: var(--bento-min-w-col-1);
+    max-width: none;
+    min-width: 240px;
+  }
+  @media only screen and (min-width: 840px) {
+    :global(.bento-item-1) {
+      max-width: var(--bento-max-w-col-1);
+      min-width: var(--bento-min-w-col-1);
+    }
+  }
+
+  @media only screen and (min-width: 1480px) {
+    :global(.bento-item-1) {
+      height: 100%;
+    }
   }
 </style>

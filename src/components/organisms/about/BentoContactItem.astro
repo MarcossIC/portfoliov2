@@ -7,7 +7,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
 
 <BentoItem class='bento-item-8'>
   <h3
-    class='bg-ml-text-white bg-clip-text text-transparent text-[2rem] font-semibold ms-[2rem] mb-8 flex gap-x-1'
+    class='bg-ml-text-white bg-clip-text text-transparent text-[2rem] font-semibold mx-auto min-[1480px]:ms-[2rem] mb-8 flex gap-x-1'
   >
     <StarIcon /> Let’s Work Together
   </h3>
@@ -21,7 +21,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
 <style>
   :global(.bento-item-8) {
     grid-area: letsWork;
-    height: 203px;
+    height: 100%;
     padding-block-start: 1.5rem;
     padding-block-end: 1rem;
     display: flex;
@@ -29,6 +29,19 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     width: var(--bento-w-col-2);
     max-width: var(--bento-max-w-col-2);
   }
+
+   @media only screen and (min-width: 840x){
+    :global(.bento-item-8) {
+      height: 203px;
+    }
+  }
+  
+  @media only screen and (min-width: 1020px){
+    :global(.bento-item-8) {
+      height: 100%;
+    }
+  }
+
   @media only screen and (min-width: 1480px) {
     :global(.bento-item-8) {
       width: var(--bento-w-col-3);

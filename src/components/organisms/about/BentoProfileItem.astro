@@ -14,7 +14,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
 ---
 
 <BentoItem class='bento-col-2 bento-item-3'>
-  <div class='flex gap-x-[1.35rem]'>
+  <div class='flex gap-x-[1rem] min-[840px]:gap-x-[1.35rem]'>
     <RectangleProfile src='/img/FOTO_CV.webp' alt='My photo' />
     <div class='flex flex-col w-full'>
       <div class='flex justify-between'>
@@ -30,7 +30,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
     <Astronaut />
   </div>
   <ChipTemplate
-    class='fixed-style w-auto text-[24px] ml-[.25rem] mt-[10px] h-[90px] flex flex-row flex-wrap !justify-start px-[18px] gap-x-[15px] min-[1225px]:gap-x-[20px] min-[1225px]:ml-[10rem]'
+    class='fixed-style w-auto flex-1 text-[24px] ml-[.25rem] mt-[15px] h-[95px] flex flex-row flex-wrap !justify-start px-[18px] gap-x-[15px] min-[840px]:mt-[10px] min-[1100px]:h-[90px] min-[1225px]:gap-x-[20px] min-[1225px]:ml-[10rem]'
   >
     <TextWithIcon text='Argentina'><CountryIcon /></TextWithIcon>
     <TextWithIcon text='IT technician'><EducationIcon /></TextWithIcon>
@@ -43,17 +43,19 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
 <style>
   :global(.bento-item-3) {
     grid-area: devProfile;
-    height: 290px;
+    height: 315px;
     display: flex;
     flex-direction: column;
     padding: 1.3rem;
     --astronaut-right: 10%;
+    --name-size: 2.75rem;
+    --name-h: 50px;
 
     .my-name {
-      font-size: 3.15rem;
+      font-size: var(--name-size);
       max-width: 200px;
       font-weight: 700;
-      line-height: 60px;
+      line-height: var(--name-h);
       background-image: var(--ml-text-white);
     }
     :global(#astronaut) {
@@ -62,6 +64,14 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
       z-index: 5;
       right: var(--astronaut-right);
       top: 0px;
+    }
+  }
+
+  @media only screen and (min-width: 840px) {
+    :global(.bento-item-3) {
+      height: 100%;
+      --name-size: 3.15rem;
+      --name-h: 60px;
     }
   }
 
@@ -75,6 +85,7 @@ import ChipTemplate from '../../templates/ChipTemplate.astro'
 
   @media only screen and (min-width: 1480px) {
     :global(.bento-item-3) {
+      height: 290px;
       --astronaut-right: 120px;
     }
   }

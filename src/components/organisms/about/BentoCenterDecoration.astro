@@ -7,7 +7,7 @@ import ReverseLittlePlant from '../../atoms/ReverseLittlePlant.astro'
 import BentoItem from '../../templates/BentoItem.astro'
 ---
 
-<BentoItem class='bento-col-2 bento-item-4'>
+<BentoItem class='bento-item-4'>
   <LittlePlant />
   <DevProductivity />
   <LogoV2 />
@@ -17,15 +17,21 @@ import BentoItem from '../../templates/BentoItem.astro'
 
 <style>
   :global(.bento-item-4) {
+    width: var(--bento-w-col-2);
+    min-width: 215px;
     grid-area: logoIam;
-    height: 135px;
+    height: 100%;
     display: flex;
+    --visible: none;
+    --logo-w: 165px;
 
     :global(.logo) {
+      display: flex !important;
+      flex: 1 1;
       justify-content: center;
 
       :global(img) {
-        width: 140px;
+        width: var(--logo-w);
       }
     }
 
@@ -40,14 +46,26 @@ import BentoItem from '../../templates/BentoItem.astro'
       right: -8px;
     }
     :global(#dev-productivity) {
+      display: var(--visible);
       position: absolute;
       top: -12px;
       left: 28px;
     }
     :global(#dev-pull-req) {
+      display: var(--visible);
       position: absolute;
       top: -12px;
       right: 10%;
+    }
+  }
+
+  @media only screen and (min-width: 840px) {
+    :global(.bento-item-4) {
+     
+      min-width: var(--bento-min-w-col-2);
+      max-width: var(--bento-max-w-col-2);
+      --visible: block;
+      --logo-w: 140px;
     }
   }
 
@@ -56,6 +74,11 @@ import BentoItem from '../../templates/BentoItem.astro'
       :global(#dev-pull-req) {
         right: 100px;
       }
+    }
+  }
+  @media only screen and (min-width: 1480px) {
+    :global(.bento-item-4) {
+      height: 135px;
     }
   }
 </style>

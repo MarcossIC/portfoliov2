@@ -9,7 +9,7 @@ import BentoItem from '../../templates/BentoItem.astro'
   </h2>
   <p class='text'>You can find more of my projects on github</p>
   <div
-    class='github-btn justify-center items-center ml-auto mt-4 cursor-pointer'
+    class='github-btn justify-center items-center mx-auto min-[1135px]:mr-0 min-[1135px]:ml-auto cursor-pointer'
   >
     <GithubWithBGIcon />
     <span>Go to github</span>
@@ -19,21 +19,30 @@ import BentoItem from '../../templates/BentoItem.astro'
 <style>
   :global(.bento-item-6) {
     grid-area: morePorjects;
-    height: 200px;
+    height: 225px;
     padding: 1rem;
     padding-inline-start: 1.75rem;
     width: var(--bento-w-col-2);
     max-width: var(--bento-max-w-col-2);
+    display: flex;
+    flex-direction: column;
+    --text-size: 1.1rem;
+    --text-max-w: none;
+    --title-size: 3rem;
+    --github-btn-text: 1.35rem;
+    --github-btn-w: 95%;
+    --github-btn-h: 55px;
+    --github-btn-mt: auto;
 
     .title {
       font-weight: 600;
-      font-size: 3rem;
+      font-size: var(--title-size);
       margin-block-end: 0.2rem;
     }
 
     .text {
-      font-size: 1rem;
-      max-width: 190px;
+      font-size: var(--text-size);
+      max-width: var(--text-max-w);
       letter-spacing: 0.3px;
       word-spacing: 0.5px;
     }
@@ -41,21 +50,34 @@ import BentoItem from '../../templates/BentoItem.astro'
     .github-btn {
       display: flex;
       column-gap: 10px;
-      width: 168px;
-      height: 42px;
+      width: var(--github-btn-w);
+      height: var(--github-btn-h);
       background: linear-gradient(
         88.61deg,
         rgba(12, 11, 11, 0.79) 8.26%,
         #000000 99.14%
       );
       border-radius: 20px;
+      margin-block-start: var(--github-btn-mt);
 
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: var(--github-btn-text);
       line-height: 20px;
       color: #ffffff;
+    }
+  }
+
+  @media only screen and (min-width: 840px) {
+    :global(.bento-item-6) {
+      height: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 1135px) {
+    :global(.bento-item-6) {
+      --github-btn-w: 260px;
     }
   }
 
@@ -63,6 +85,11 @@ import BentoItem from '../../templates/BentoItem.astro'
     :global(.bento-item-6) {
       width: var(--bento-w-col-3);
       max-width: none;
+      --github-btn-text: 1rem;
+      --text-size: 1rem;
+      --text-max-w: 190px;
+      --github-btn-w: 168px;
+      --github-btn-h: 42px;
     }
   }
 </style>
