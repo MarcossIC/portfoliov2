@@ -48,19 +48,18 @@ import BentoWhoIamItem from './BentoWhoIamItem.astro'
     justify-content: center;
 
     grid-template:
-      'devProfile        devProfile        '
-      'devProfile        devProfile        '
-      'yearsExpirence    logoIam           '
-      'whoIam            whoIam            '
-      'whoIam            whoIam            '
-      'devStack          devStack          '
-      'devStack          devStack          '
-      'developmentAreas  developmentAreas  '
-      'morePorjects      morePorjects      '
-      'morePorjects      morePorjects      ';
+      'devProfile        devProfile  devProfile'
+      'devProfile        devProfile  devProfile'
+      'yearsExpirence    logoIam     logoIam'
+      'whoIam            whoIam      whoIam'
+      'whoIam            whoIam      whoIam'
+      'devStack          devStack    devStack'
+      'devStack          devStack    devStack'
+      'developmentAreas  developmentAreas developmentAreas'
+      'morePorjects  morePorjects morePorjects'
+      'letsWork  letsWork letsWork';
   }
-
-  @media only screen and (min-width: 1225px) {
+  z @media only screen and (min-width: 1225px) {
     .bento {
       --bento-w-col-1: 430px;
       --bento-max-w-col-1: none;
@@ -69,15 +68,15 @@ import BentoWhoIamItem from './BentoWhoIamItem.astro'
   @media only screen and (min-width: 850px) {
     .bento {
       grid-template:
-        'yearsExpirence   devProfile   '
-        'yearsExpirence   devProfile   '
-        'devStack         devProfile   '
-        'devStack         logoIam      '
-        'devStack         whoIam       '
-        'devStack         whoIam       '
-        'devStack         whoIam       '
-        'developmentAreas morePorjects '
-        'letsWork         letsWork     ';
+        'yearsExpirence   devProfile'
+        'yearsExpirence   devProfile'
+        'devStack         devProfile'
+        'devStack         logoIam'
+        'devStack         whoIam'
+        'devStack         whoIam'
+        'devStack         whoIam'
+        'developmentAreas morePorjects'
+        'letsWork         letsWork';
     }
   }
 
