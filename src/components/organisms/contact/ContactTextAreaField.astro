@@ -1,0 +1,52 @@
+---
+const { name, id, label, error, aria, cols, rows } = Astro.props
+---
+
+<div class='relative'>
+  <textarea
+    name={name}
+    id={id}
+    role='textbox'
+    aria-label={aria}
+    autocapitalize='none'
+    cols={cols}
+    rows={rows}
+    required></textarea>
+  <label for={name}>{label}</label>
+  {error && <p>{error}</p>}
+</div>
+
+<style>
+  textarea {
+    background: rgba(253, 253, 253, 0);
+    outline: none;
+    border: 1px solid rgba(255, 0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    display: block;
+    color: rgb(207, 207, 207);
+    font-weight: 400;
+    font-size: 1em;
+    resize: none;
+    box-shadow:
+      inset 4px 4px 4px rgb(35 0 65 / 13%),
+      4px 4px 4px rgb(46 0 85 / 13%);
+  }
+
+  textarea:focus + label,
+  textarea:valid + label {
+    transform: translateY(-170%) scale(0.875);
+    left: 13%;
+  }
+
+  label {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    pointer-events: none;
+    color: rgb(238, 238, 238);
+    transition: all 0.4s;
+  }
+</style>

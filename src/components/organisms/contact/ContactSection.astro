@@ -1,0 +1,39 @@
+---
+import SecondTitle from '../../atoms/SecondTitle.astro'
+import AstroContactForm from './AstroContactForm.astro'
+---
+
+<section
+  id='contact'
+  class='max-w-[100vw] flex flex-col w-full flex-1 justify-center items-center'
+>
+  <SecondTitle sub='Send me a message to email, for any questions'
+    >Contact me</SecondTitle
+  >
+  <div class='flex w-full'>
+    <div class='container-form items-center justify-center shadow-contact-box'>
+      <div class='h-full w-[100%]'><AstroContactForm /></div>
+    </div>
+    <div></div>
+  </div>
+</section>
+
+<style>
+  .container-form {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 450px;
+  }
+  .container-form::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 80%;
+    right: -40%;
+    background: rgb(35 0 92);
+    background: radial-gradient(circle, rgb(35 0 92) 61%, rgb(88 0 176) 100%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+</style>

@@ -1,0 +1,74 @@
+form.contact-form
+{
+    &::before
+    {
+        position: absolute;
+        content: '';
+        width: 40%;
+        height: 40%;
+        right: 1%;
+        z-index: -1;
+        background: radial-gradient(circle,
+                rgb(102 4 200) 20%,
+                rgb(43 5 96) 60%,
+                rgb(36 3 83) 100%);
+        filter: blur(70px);
+        border-radius: 50%;
+    }
+
+    input,
+    textarea
+    {
+        background: rgba(253, 253, 253, 0);
+        outline: none;
+        border: 1px solid rgba(255, 0, 0, 0);
+        border-radius: 0.5rem;
+        padding: 10px;
+        margin: 10px auto;
+        width: 80%;
+        display: block;
+        color: rgb(207, 207, 207);
+        font-weight: 400;
+        font-size: 1em;
+        box-shadow:
+            inset 4px 4px 4px rgb(35 0 65 / 13%),
+            4px 4px 4px rgb(46 0 85 / 13%);
+    }
+    textarea {
+        resize: none;
+    }
+
+    input:focus + label,
+    input:valid + label,
+    input:invalid:not(:placeholder-shown)+label
+    {
+        transform: translateY(-120%) scale(0.9);
+    }
+
+    textarea:focus + label,
+    textarea:valid + label
+    {
+        transform: translateY(-154%) scale(0.875);
+        left: 13%;
+    }
+
+    label
+    {
+        position: absolute;
+        pointer-events: none;
+        color: rgb(238, 238, 238);
+        transition: all 0.4s;
+    }
+
+    input + label
+    {
+        left: 15%;
+        top: 37%;
+    }
+
+    textarea + label
+    {
+        left: 15%;
+        top: 15%;
+    }
+}

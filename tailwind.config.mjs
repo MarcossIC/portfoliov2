@@ -9,6 +9,9 @@ export default {
 			backgroundImage: {
 				'ml-text-white': 'var(--ml-text-white)',
 			},
+			boxShadow: {
+				'contact-box': '0px 0px 30px rgba(0, 0, 0, 0.03)',
+			},
 			animation: {
 				meteor: "meteor 5s linear infinite",
 				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",

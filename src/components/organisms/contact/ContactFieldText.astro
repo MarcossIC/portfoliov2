@@ -1,0 +1,53 @@
+---
+const { type, name, id, autocomplete, label, error, aria } = Astro.props
+---
+
+<div class='relative'>
+  <input
+    type={type}
+    name={name}
+    id={id}
+    autocomplete={autocomplete}
+    role='textbox'
+    aria-label={aria}
+    autocapitalize='none'
+    placeholder=" "
+    required
+  />
+  <label>{label}</label>
+  <p class="" id={error}></p>
+</div>
+
+<style>
+  input {
+    background: rgba(253, 253, 253, 0);
+    outline: none;
+    border: 1px solid rgba(255, 0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    display: block;
+    color: rgb(207, 207, 207);
+    font-weight: 400;
+    font-size: 1em;
+    box-shadow:
+      inset 4px 4px 4px rgb(35 0 65 / 13%),
+      4px 4px 4px rgb(46 0 85 / 13%);
+  }
+
+  input:focus + label,
+  input:valid + label,
+  input:invalid:not(:placeholder-shown) + label {
+    transform: translateY(-120%) scale(0.9);
+  }
+
+  label {
+    position: absolute;
+    left: 15%;
+    top: 37%;
+    pointer-events: none;
+    color: rgb(238, 238, 238);
+    transition: all 0.4s;
+  }
+</style>
