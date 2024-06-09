@@ -6,14 +6,15 @@ interface Props {
   name: string
   desc: string
   id: string
+  repository: string
 }
 
-const { url, name, desc, id } = Astro.props
+const { url, name, desc, id,repository="" } = Astro.props
 ---
 
 <figure class='project-card-container'>
   <div class='brightness brightness-1'></div>
-  <ProjectImage url={url} id={id}><slot /></ProjectImage>
+  <ProjectImage repository={repository} url={url} id={id}><slot /></ProjectImage>
 
   <figcaption class='project-caption'>
     <h3 class='bg-clip-text !text-transparent fill-transparent'>{name}</h3>

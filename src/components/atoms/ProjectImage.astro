@@ -1,28 +1,35 @@
 ---
+import Link from './Link.astro'
 
 interface Props {
   url: string
   id: string
+  repository: string
 }
 
-const { url, id } = Astro.props
+const { url, id, repository } = Astro.props
 ---
 
 <picture class='project-img'>
-  <div class='atropos project-atropos-content' id={id}>
-    <!-- scale container (required) -->
-    <div class='atropos-scale'>
-      <!-- rotate container (required) -->
-      <div class='atropos-rotate'>
-        <!-- inner container (required) -->
-        <div class='atropos-inner'>
-          <div class='img-container' style={{ backgroundImage: `url(${url})` }}>
+  <Link to={repository} target='_blank' title='Link to source code'
+    ><div class='atropos project-atropos-content' id={id}>
+      <!-- scale container (required) -->
+      <div class='atropos-scale'>
+        <!-- rotate container (required) -->
+        <div class='atropos-rotate'>
+          <!-- inner container (required) -->
+          <div class='atropos-inner'>
+            <div
+              class='img-container'
+              style={{ backgroundImage: `url(${url})` }}
+            >
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="flex flex-nowrap gap-x-4 absolute left-[5%] bottom-[1.75%]">
+  </Link>
+  <div class='flex flex-nowrap gap-x-4 absolute left-[5%] bottom-[1.75%]'>
     <slot />
   </div>
 </picture>
