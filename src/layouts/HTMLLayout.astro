@@ -161,8 +161,6 @@ const { title } = Astro.props
     max-width: none;
   }
   body {
-
-
     background: #0f0227;
     font-family:
       'Montserrat',
@@ -186,6 +184,29 @@ const { title } = Astro.props
         margin-inline: 6dvw;
       }
     }
+  }
+
+  body,
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #b9b9b9 #1b004e;
+  }
+  body::-webkit-scrollbar-button,
+  html::-webkit-scrollbar-button {
+    display: none;
+  }
+  body::-webkit-scrollbar-track,
+  html::-webkit-scrollbar-track {
+    background-color: #1b004e;
+  }
+  body::-webkit-scrollbar,
+  html::-webkit-scrollbar {
+    width: 12px;
+    background-color: #1b004e;
+  }
+  body::-webkit-scrollbar-corner,
+  html::-webkit-scrollbar-corner {
+    background: transparent;
   }
 
   h1,
@@ -214,42 +235,6 @@ const { title } = Astro.props
     width: 160px;
     font-size: 1rem;
     border-radius: 1.1rem;
-  }
-
-  ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-
-    display: none;
-  }
-  ::-webkit-scrollbar button {
-    width: 0px;
-    height: 0px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: 0px none transparent;
-    border-radius: 50px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb:active {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-    border: 0px none transparent;
-    border-radius: 50px;
-  }
-  ::-webkit-scrollbar-track:hover {
-    background: transparent;
-  }
-  ::-webkit scrollbar-track:active {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-corner {
-    background: transparent;
   }
 
   .app-container {
