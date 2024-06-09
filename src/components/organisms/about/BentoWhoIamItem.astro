@@ -7,17 +7,18 @@ import BentoItem from '../../templates/BentoItem.astro'
     Who I am?
   </h2>
   <p>
-    I am a computer technician, passionate about programming and technology.
-    Experienced in software architecture, API creation, and web design.
-    Proficient in agile methodologies and team collaboration. Always eager to
-    learn and explore new technologies.
+    I am a <span class='font-semibold'>computer technician</span>, passionate
+    about programming and technology. Experience in back-end development with
+    Spring boot and front-end development with React or Angular. Proficient in
+    agile methodologies and team collaboration. Always eager to learn and
+    explore new technologies.
   </p>
 </BentoItem>
 
 <style>
   :global(.bento-item-5) {
     grid-area: whoIam;
-    height: 285px;
+    height: 315px;
     padding-inline-start: 30px;
     padding-block-start: 10px;
     --text-max-w: 735px;
@@ -38,9 +39,9 @@ import BentoItem from '../../templates/BentoItem.astro'
     }
   }
 
-    @media only screen and (min-width: 550px) {
+  @media only screen and (min-width: 550px) {
     :global(.bento-item-5) {
-      height: 265px;
+      height: 290px;
     }
   }
 
