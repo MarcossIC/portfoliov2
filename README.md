@@ -9,7 +9,7 @@ This web portfolio has been planned as a migration of the [portfolio](https://gi
 The project is developed in Angular 16 and uses these technologies:
 
 <p user-select="none" align="left">
-   <a href="#" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=astro,react,tailwind"/> </a>
+   <a href="#" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=astro,react,tailwind,ts,css"/> </a>
 </p>
 
 ## 🚀 Project Structure
