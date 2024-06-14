@@ -1,20 +1,20 @@
-# Astro Starter Kit: Basics
+# Portfolio Web Version 2 
 
-```sh
-npm create astro@latest -- --template basics
-```
+## :sparkles: Introduction
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+This web portfolio has been planned as a migration of the [portfolio](https://github.com/MarcossIC/portfolio) project made in Angular, the plan was to take it to Astro, to optimize the speed and SEO of the page using the Astro islands.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🛠 Stack
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+The project is developed in Angular 16 and uses these technologies:
+
+<p user-select="none" align="left">
+   <a href="#" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=astro,react,tailwind"/> </a>
+</p>
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Architecture used in the project
 
 ```text
 /
@@ -22,33 +22,30 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├──  atoms/
+|   |   ├──  molecules/
+|   |   ├──  organism/
+|   |   ├──  legacy/
+|   |   ├──  react/
+|   |   └──  templates/
+|   |
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   |    └── index.astro
+|   └── utils/
+│        └── utils.ts
+|
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## ℹ️ Development server
+In order to deploy a local version of the project you must:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Download the project from github
+- Run `npm i` or `pnpm i` at the root of the project
+- Run `npm start` or `pnpm start` for a dev server. Navigate to `http://localhost:4321/`.
+  The application will automatically reload if you change any of the source files.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 💪 Project status
+I don't think this project will continue, due to lack of time and the need to update the portfolio, I decided to move the entire update to the Angular version, you can see it in the portfolio repository. It was also an interesting experience using Astro and I may use it in another project.
